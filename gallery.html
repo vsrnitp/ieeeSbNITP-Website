@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#023D4F">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GALLERY</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Nitp Ieee Gallery Ieee gallery" />
+  <!--
+        <meta name="keywords" content="jquery, carousel, image gallery, slider, responsive, flexible, fluid, resize, css3" />
+      -->
+  <meta name="author" content="Vishwajeet" />
+
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link rel="stylesheet" type="text/css" href="css/demo.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+  <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+  <link href='https://fonts.googleapis.com/css?family=Secular+One' rel='stylesheet'>
+  <noscript>
+    <style>
+      .es-carousel ul {
+        display: block;
+      }
+    </style>
+  </noscript>
+
+
+
+  <script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">
+    <div class="rg-image-wrapper">
+        {{if itemsCount > 1}}
+          <div class="rg-image-nav">
+            <a href="#" class="rg-image-nav-prev">Previous Image</a>
+            <a href="#" class="rg-image-nav-next">Next Image</a>
+          </div>
+        {{/if}}
+        <div class="rg-image"></div>
+        <div class="rg-loading"></div>
+        <div class="rg-caption-wrapper">
+          <div class="rg-caption" style="display:none;">
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </script>
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- font -->
+  <link href='https://fonts.googleapis.com/css?family=Corbel' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    body {
+      font-family: 'Corbel';
+      margin: 0%;
+      background-color: white;
+
+
+    }
+
+
+    /* The container must be positioned relative: */
+    .dropbtn {
+      background-color: #023D4F;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      width: 250px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #023D4F;
+    }
+
+    .nav {
+      font-weight: bolder;
+      font-size: 20px;
+    }
+
+    #curr {
+      color: white;
+      transition: 0.3s;
+      border-radius: 25px 25px 25px 25px;
+
+    }
+
+    @font-face {
+      font-family: Geo415M;
+      src: url('Geo415M.ttf');
+    }
+
+    @font-face {
+      font-family: elkwood;
+      src: url('elkwood.otf');
+    }
+
+
+
+    #curr:hover {
+
+      /*color: green;*/
+      font-size: 30px;
+
+
+
+    }
+
+    #deskview {
+      height: 50px;
+    }
+
+    #about {
+      font-size: 30px;
+
+    }
+
+    #smalllogo:hover {
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 979px) {
+      #logoindex {
+        display: none;
+      }
+
+      .rg-view {
+        display: none;
+      }
+
+      .dropbtn {
+        margin-bottom: 30px;
+      }
+
+      .dropdown-content {
+        margin-top: -30px;
+      }
+
+
+      #imgtop {
+        margin-left: 130px;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+
+      #imgbot {
+        margin-left: 130px;
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+
+
+    }
+
+
+    @media screen and (min-width: 980px) {
+      #mobHead {
+        display: none;
+      }
+
+      #smalllogo {
+        display: none;
+      }
+
+      #todo {
+        height: 75px;
+      }
+
+      #imgtop {
+        margin-left: 120px;
+      }
+    }
+    }
+
+    .navbar-default {
+
+
+
+
+
+
+      background-color: #0084AD;
+      background-image: none;
+      background-repeat: no-repeat;
+
+    }
+
+    .img-thumbnail {
+      height: 50px;
+      width: 60px;
+    }
+
+
+    .fa {
+
+      font-size: 40px;
+
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+      /*background: #3B5998;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    /* Twitter */
+    .fa-twitter {
+      /*background: #55ACEE;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    .fa-envelope {
+      /*background: #55ACEE;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    #impbt {
+      background-color: black;
+      color: white;
+      border-color: black;
+      transition: 2s;
+    }
+
+    #impbt:hover {
+      color: black;
+      background-color: white;
+      border-color: white;
+    }
+
+    #esbt {
+      background-color: black;
+      color: white;
+      border-color: black;
+      transition: 2s;
+    }
+
+    #esbt:hover {
+      color: black;
+      background-color: white;
+      border-color: white;
+    }
+
+    #ehbt {
+      background-color: black;
+      color: white;
+      border-color: black;
+      transition: 2s;
+    }
+
+    #ehbt:hover {
+      color: black;
+      background-color: white;
+      border-color: white;
+    }
+  </style>
+</head>
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+  <nav class="navbar navbar-default navbar-fixed-top container-fluid" id="deskview"
+    style="border-width: 0px; height: 80px;background-color: #023D4F; font-family: Geo415m; font-weight: bolder;">
+    <div class="container-fluid" style="background-color:#023D4F;" id="todo">
+      <!--
+    <div class="navbar-header">
+    		<a href="index.html" id="smalllogo" style="color: white;font-weight: bolder;font-size: 25px;text-align: center;">IEEE NITP</a>
+      <button type="button" id="bt1" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+
+      </button>
+      </div>
+  -->
+
+      <a class="navbar-brand" href="index.html"><img id="logoindex" src="ieeeLogo.png"
+          style="background-color:#023D4F; width: 100px; height: 40px;"></a>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="margin-top: 15px; text-align: center;">
+          <li><a href="index.html" id="curr">HOME</a></li>
+
+          <li><a href="events.html" id="curr">EVENTS</a></li>
+
+          <li> <a href="gallery.html" id="curr" class="drop1" style="font-size: 20px;
+background-color: white;
+color:#0084AD;">GALLERY</a>
+          </li>
+          <li><a href="committee.html" id="curr">COMMITTEE</a></li>
+          <li><a href="ecerti.html" id="curr">E-CERTI</a></li>
+          <li><a href="aboutus.html" id="curr">ABOUT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Header ends her -->
+
+  <!-- nav for mobile -->
+  <style type="text/css">
+    #myNavbarMob {
+      display: none;
+      background-color: #023D4F;
+      color: white;
+      width: 100%;
+      padding: 0px;
+      cursor: pointer;
+    }
+
+    #homeMob,
+    #gallMob,
+    #comMob,
+    #cerMob,
+    #eventMob,
+    #abMob {
+      font-weight: bolder;
+      font-size: 28px;
+      transition: 0.2s;
+      padding: 5px;
+      border-radius: 25px 25px 25px 25px;
+
+    }
+
+    #homeMob:hover {
+      font-size: 35px;
+    }
+
+    #gallMob:hover {
+      font-size: 35px;
+    }
+
+    #comMob:hover {
+      font-size: 35px;
+    }
+
+    #eventMob:hover {
+      font-size: 35px;
+    }
+
+    #abMob:hover {
+      font-size: 35px;
+    }
+  </style>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top" id="mobHead"
+    style="height: 80px;background-color:#023D4F; border-radius: 0px; border-width: 0px;">
+
+    <span style="padding-top: 3px;">
+      <h2 style="color: white; font-weight: bolder; padding-left: 15px;font-family: geo415m;">IEEE NITP</h2>
+      <span style="display: inline; float: right; margin-top: -50px; color: white;">
+
+        <button type="button" id="btnMob" class="navbar-toggle"
+          style="border-width: 0px; margin-top: 2px; background-color: #1b5060;" data-toggle="collapse">
+
+          <span class="fa fa-bars" style="border-width: 0px; font-size: 30px;"></span>
+
+        </button>
+
+      </span>
+    </span>
+
+    <div class="container-fluid" id="myNavbarMob"
+      style="text-align: center; font-family: geo415m; font-size:10px; border-bottom-right-radius:10px ; border-bottom-left-radius: 10px;background-color: rgba(2,61,79,0.9); margin-top: 27px; ">
+
+      <div id="homeMob" style="font-size:20px; margin-bottom: 3px;"><a href="index.html" style="color: white;">HOME</a>
+      </div>
+      <div id="eventMob" style="font-size:20px; margin-bottom: 3px;"><a href="events.html"
+          style="color: white;">EVENTS</a></div>
+      <div id="gallMob"
+        style="font-size:20px; margin-bottom: 3px; margin-bottom: 3px; background-color: white; width: 160px; margin-left: auto; margin-right: auto; color: #023D4F;">
+        GALLERY</div>
+      <div id="comMob" style="font-size:20px; margin-bottom: 3px;"><a href="committee.html"
+          style="color: white;">COMMITTEE</a></div>
+      <div id="cerMob" style="font-size:20px; margin-bottom: 3px; "><a href="ecerti.html"
+          style="color: white;">E-CERTI</a></div>
+      <div id="abMob" style="font-size:20px; "><a href="galleryiotworkshop.html" style="color: white;">ABOUT US</a>
+      </div>
+
+    </div>
+
+
+  </nav>
+
+
+  <script>
+    $(document).ready(function () {
+      $("#btnMob").click(function () {
+
+        $("#myNavbarMob").slideToggle("slow");
+      });
+    });
+  </script>
+
+  <!-- End of nav for mobile -->
+
+
+  <!-- IoT Workshop -->
+
+
+
+  <div class="container" style="margin-top: 70px;">
+
+
+
+    <!--
+<div class="container-fluid" id="headGallery">
+        <div class="row">
+          <div class="col-lg-2"style="margin-top: 5px;">
+           <a href="javascript:void(0)" title="latest gallery">
+  <img src="leftcircle.png" class="img img-responsive" style="height: 50px; margin-top: 0px;" id="imgtop">
+  </a>
+          </div>
+          <div class="col-lg-2 text-center" style="margin-top: 5px;">
+            <a href="gallery.html">
+          <button class="btn btn-default" id="iotbt">
+            <h5>IoT Workshop</h5>
+          </button></a>
+        </div>
+        <div class="col-lg-2 text-center"style="margin-top: 5px;" >
+          <a href="galleryimpulse.html">
+          <button id="impbt" class="btn btn-default">
+            <h5>Impulse</h5>
+          </button></a>
+        </div>
+        <div class="col-lg-2 text-center"style="margin-top: 5px;" >
+          <a href="galleryembeddedsystem.html">
+          <button id="esbt" class="btn btn-default">
+            <h5>Embedded System</h5>
+          </button></a>
+        </div>
+        <div class="col-lg-2 text-center"style="margin-top: 5px;" >
+          <a href="galleryethicalhacking.html">
+          <button id="ehbt" class="btn btn-default">
+            <h5>Ethical Hacking</h5>
+          </button></a>
+        </div>
+        <div class="col-lg-2"style="margin-top: 5px;">
+             <a href="javascript:void(0)" title="last gallery">
+  <img src="rightcircle.png" class="img img-responsive" style="height: 50px; margin-top: 0px;" id="imgbot">
+  </a>
+        </div>
+        </div>
+</div>      
+
+-->
+    <!-- Surround the select box within a "custom-select" DIV element.
+Remember to set the width: -->
+    <style type="text/css">
+
+    </style>
+
+
+    <div class="dropdown" style="margin-top: 40px; margin-bottom: 0px;">
+      <button class="dropbtn" id="main"
+        style="border-radius: 4px; width: 240px;  text-align: left; font-family: geo415m">IOT WORKSHOP
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9660;</button>
+      <div class="dropdown-content">
+        <a style=" font-family: geo415m" href="galleryethicalhacking.html">ETHICAL HACKING WORKSHOP</a>
+        <a style="font-family: geo415m" href="galleryimpulse.html">IMPULSE 18 </a>
+        <a style="font-family: geo415m" href="galleryelectroblitz2.html">ELECTROBLITZ 2.0</a>
+        <a style="font-family: geo415m" href="galleryembeddedsystem.html">EMBEDDED SYSTEMS</a>
+      </div>
+    </div>
+
+
+
+    <div id="rg-gallery" class="rg-gallery">
+      <div class="rg-thumbs">
+        <!-- Elastislide Carousel Thumbnail Viewer -->
+        <div class="es-carousel-wrapper">
+          <div class="es-nav">
+            <span class="es-nav-prev">Previous</span>
+            <span class="es-nav-next">Next</span>
+          </div>
+          <div class="es-carousel">
+            <ul>
+
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot2.png" data-large="Gallery/iotworkshop/iot2.jpg"
+                    alt="image02" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot1.png" data-large="Gallery/iotworkshop/iot1.jpg"
+                    alt="image01" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot3.png" data-large=" Gallery/iotworkshop/iot3.jpg"
+                    alt="image03" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot4.png" data-large=" Gallery/iotworkshop/iot4.jpg "
+                    alt="image04" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot5.png" data-large="Gallery/iotworkshop/iot5.jpg"
+                    alt="image05" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot6.png" data-large="Gallery/iotworkshop/iot6.jpg"
+                    alt="image06" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot7.png" data-large="Gallery/iotworkshop/iot7.jpg"
+                    alt="image07" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot8.png" data-large="Gallery/iotworkshop/iot8.jpg"
+                    alt="image08" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot9.png" data-large="Gallery/iotworkshop/iot9.jpg"
+                    alt="image09" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot10.png" data-large="Gallery/iotworkshop/iot10.jpg"
+                    alt="image10" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot11.png" data-large="Gallery/iotworkshop/iot11.jpg"
+                    alt="image11" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot12.png" data-large="Gallery/iotworkshop/iot12.jpg"
+                    alt="image12" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot13.png" data-large="Gallery/iotworkshop/iot13.jpg"
+                    alt="image13" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot14.png"
+                    data-large="Gallery/iotworkshop/iot14.jpg " alt="image14" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot15.png" data-large="Gallery/iotworkshop/iot15.jpg"
+                    alt="image15" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot16.png" data-large="Gallery/iotworkshop/iot16.jpg"
+                    alt="image16" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot17.png" data-large="Gallery/iotworkshop/iot17.jpg"
+                    alt="image17" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot18.png" data-large="Gallery/iotworkshop/iot18.jpg"
+                    alt="image18" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot19.png" data-large="Gallery/iotworkshop/iot19.jpg"
+                    alt="image19" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot20.png" data-large="Gallery/iotworkshop/iot20.jpg"
+                    alt="image20" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot21.png" data-large="Gallery/iotworkshop/iot21.jpg"
+                    alt="image21" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot22.png" data-large="Gallery/iotworkshop/iot22.jpg"
+                    alt="image22" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot23.png" data-large="Gallery/iotworkshop/iot23.jpg"
+                    alt="image23" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot24.png" data-large="Gallery/iotworkshop/iot24.jpg"
+                    alt="image24" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot25.png" data-large="Gallery/iotworkshop/iot25.jpg"
+                    alt="image25" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot26.png" data-large="Gallery/iotworkshop/iot26.jpg"
+                    alt="image26" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot27.png" data-large="Gallery/iotworkshop/iot27.jpg"
+                    alt="image27" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot28.png" data-large="Gallery/iotworkshop/iot28.jpg"
+                    alt="image28" /></a></li>
+              <li><a href="#"><img src="Gallery/iotworkshop/Thumbs/iot29.png" data-large="Gallery/iotworkshop/iot29.jpg"
+                    alt="image29" /></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End Elastislide Carousel Thumbnail Viewer -->
+      </div><!-- rg-thumbs -->
+    </div><!-- rg-gallery -->
+
+  </div><!-- content -->
+  </div><!-- container -->
+
+
+
+
+
+  <!--Impulse -->
+
+
+
+
+
+  <!-- footer begins here-->
+
+
+
+
+  </div>
+
+  <nav class="navbar navbar-default navbar-bottom container-fluid" id="deskview"
+    style="height: 110px; margin-top: 62px; border-radius: 0px; border-width: 0px; padding-top: 10px; margin-bottom: -20px; background-color: #023D4F; color: white;">
+
+
+    <div class="row" style="margin-top: 10px;">
+      <div class="col-lg-6 text-center">
+
+        <p style="font-weight: bolder;font-size: 20px;">Follow Us:&nbsp;
+          <a href="https://www.facebook.com/ieee.nitp" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+          &nbsp;&nbsp;
+
+          <a href="mailto:ieeeclub@nitp.ac.in" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+          &nbsp;&nbsp;
+        </p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <a href="index.html" style="text-decoration:none;color:white;">Home |</a>
+        <a href="events.html" style="text-decoration:none;color:white;">Events |</a>
+        <a href="gallery.html" style="text-decoration:none;color:white;">Gallery |</a>
+        <a href="committee.html" style="text-decoration:none;color:white;">Committee </a>
+
+      </div>
+
+    </div>
+    <div class="row">
+
+      <div class="col-lg-6 text-center">
+        <p style="font-size:85%; font-weight: normal;">Copyright © IEEE NIT Patna &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="developer.html" style="color: white;">
+            D&D by IEEE WEB TEAM. </a>
+        </p>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+  </nav>
+
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.elastislide.js"></script>
+  <script type="text/javascript" src="js/gallery.js"></script>
+</body>
+
+</html>

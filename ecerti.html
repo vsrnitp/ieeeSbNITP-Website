@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#023D4F">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-CERTI</title>
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- This space has been left intentionally blank to include icon-->
+
+
+
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- font -->
+  <link href='https://fonts.googleapis.com/css?family=Corbel' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Secular+One' rel='stylesheet'>
+
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#getcerti").hover(function () {
+        $(this).css("transition", "0.1s");
+        $(this).css("color", "dodgerblue");
+        $(this).css("background-color", "#e0e0e0")
+
+      }, function () {
+        $(this).css("color", "white");
+        $(this).css("background-color", "dodgerblue")
+
+      });
+    });
+
+
+    // jquerry for placeholder
+  </script>
+
+  <style type="text/css">
+    html {
+      width: 100%;
+      height: 100%;
+
+
+      margin: 0;
+      padding: 0;
+    }
+
+    #playArea {
+      opacity: 0.7;
+      position: absolute;
+      z-index: -1;
+
+    }
+
+
+    body {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      font-family: 'corbel';
+      margin: 0%;
+
+
+
+    }
+
+    body {
+      font-family: 'Corbel';
+      position: relative;
+
+
+
+    }
+
+    #developer {
+      font-family: 'Charm';
+      color: white;
+      font-weight: bold;
+      opacity: 0.7;
+
+    }
+
+    #developer:hover {
+      cursor: pointer;
+      opacity: 1.0;
+    }
+
+    #getcerti {
+      border-radius: 0px;
+      color: white;
+      width: 150px;
+      height: 50px;
+      font-family: Geo415M;
+      background-color: dodgerblue;
+      border-radius: 5px;
+      border-width: 0px;
+      padding-top: 0px;
+    }
+    }
+
+    #getcerti:hover {
+      color: black;
+      background-color: white;
+    }
+
+
+
+
+
+    .fa {
+
+      font-size: 40px;
+
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+      /*background: #3B5998;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    /* Twitter */
+    .fa-twitter {
+      /*background: #55ACEE;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    .fa-envelope {
+      /*background: #55ACEE;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    #smalllogo:hover {
+      text-decoration: none;
+    }
+
+    #cer {
+      display: none;
+    }
+
+
+
+
+
+
+
+
+    .nav {
+      font-weight: bolder;
+      font-size: 20px;
+    }
+
+    #curr {
+      color: white;
+      transition: 0.3s;
+      border-radius: 25px 25px 25px 25px;
+
+
+    }
+
+    @font-face {
+      font-family: Geo415M;
+      src: url('Geo415M.ttf');
+    }
+
+    @font-face {
+      font-family: elkwood;
+      src: url('elkwood.otf');
+    }
+
+    #curr:hover {
+
+      /*color: green;*/
+      font-size: 30px;
+
+
+
+
+
+    }
+
+    #marg {
+
+      /*background-color: black;*/
+      margin-top: 30px;
+      background-color: #d3d3d3;
+      height: 300px;
+    }
+
+    #mugg {}
+
+    #marg:hover {}
+
+
+    #deskview {
+      height: 70px;
+      border-color: #023D4F;
+    }
+
+    #about {
+      font-size: 30px;
+
+    }
+
+    @media screen and (min-width: 980px) {
+      .hero {
+        width: 980px;
+      }
+
+      #about {
+        font-size: 18px;
+      }
+
+      #todo {
+        height: 80px;
+      }
+
+      #enterbar {
+        width: 250px;
+      }
+
+      #mobHead {
+        display: none;
+      }
+
+      #smalllogo {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .hero h1 {
+        font-size: 4em;
+      }
+
+      #about {
+        font-size: 16px;
+      }
+
+      #logoindex {
+        display: none;
+      }
+
+      #playArea {
+        display: none;
+      }
+
+      #mobview {
+        padding-left: 50px;
+      }
+
+      #enterbar {
+        width: 75%;
+
+      }
+
+      #footImg {
+        display: none;
+      }
+
+
+    }
+
+
+
+    .navbar-default {
+
+
+
+
+
+
+      background-color: #023D4F;
+      background-image: none;
+      background-repeat: no-repeat;
+      height: 200px;
+
+    }
+
+    .img-thumbnail {
+      height: 50px;
+      width: 60px;
+    }
+
+    .navbar-header {
+      z-index: 10px;
+    }
+  </style>
+
+
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <canvas id="playArea"></canvas>
+  <!--
+<nav class="navbar navbar-default navbar-fixed-topcontainer-fluid" id="deskview" style="border-width: 0px; border-radius: 0px;">
+  <div class="container-fluid" style="background-color:#023D4F; font-family: geo415m;  font-weight: bolder; " id="todo">
+    <div class="navbar-header">
+    	<a href="index.html" id="smalllogo" style="color: white;font-weight: bolder;font-size: 25px;text-align: center;">IEEE NITP</a>
+      <button type="button" id="bt1" onclick="fun2()" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+
+      </button>
+      
+      <a class="navbar-brand" id="test" href="index.html"><img id="logoindex" class="img-responsive" src="ieeeLogo.png" style="background-color: #023D4F; width: 100px; height: 40px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav navbar-right" style="margin-top: 15px; text-align: center;" >
+        <li><a href="index.html" id="curr" >HOME</a></li>
+       
+        <li><a href="events.html" id="curr">EVENTS</a></li>
+      
+        <li>  <a href="galleryiotworkshop.html"id="curr">GALLERY</a>
+        </li>
+        <li><a href="committee.html" id="curr">COMMITTEE</a></li>
+        <li><a href="ecerti.html" id="curr" style="font-size: 20px;
+background-color: white;
+color:#0084AD;">E-CERTI</a></li>
+<li><a href="aboutus.html" id="curr">ABOUT US</a></li>
+        </ul>
+    </div>
+  </div>
+</nav>
+-->
+
+
+
+  <!-- Earlier navigation bar -->
+
+
+  <nav class="navbar navbar-default navbar-fixed-top container-fluid" id="deskview"
+    style="height: 80px;background-color:#023D4F; font-family: geo415m; border-radius: 0px; border-width: 0px;">
+    <div class="container-fluid" id="todo" style="background-color:#023D4F; width: 100%; ">
+      <!--
+    <div class="navbar-header">
+        <a href="index.html" id="smalllogo" style="color: white;font-weight: bolder;font-size: 25px; ">IEEE NITP</a>
+      <button type="button" id="bt1" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+
+      </button>
+
+    </div>
+-->
+
+
+      <a class="navbar-brand" href="index.html"><img id="logoindex" src="ieeeLogo.png"
+          style="background-color: #023D4F; width: 100px; height: 40px;"></a>
+
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="margin-top: 15px; text-align: center;">
+          <li><a href="index.html" id="curr" style="font-weight: bolder;">HOME</a></li>
+
+          <li><a href="events.html" id="curr" style="font-weight: bolder;">EVENTS</a></li>
+
+          <li> <a href="galleryiotworkshop.html" id="curr" class="drop1" style="font-weight: bolder;">GALLERY</a>
+          </li>
+          <li><a href="committee.html" id="curr" style="font-weight: bolder;">COMMITTEE</a></li>
+          <li><a href="ecerti.html" id="curr" style="font-size: 20px;
+background-color: white;font-weight: bolder;
+color:#0084AD;">E-CERTI</a></li>
+          <li><a href="aboutus.html" id="curr" style="font-weight: bolder;">ABOUT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- nav for mobile -->
+  <style type="text/css">
+    #myNavbarMob {
+      display: none;
+      background-color: #023D4F;
+      color: white;
+      width: 100%;
+      padding: 0px;
+      cursor: pointer;
+    }
+
+    #homeMob,
+    #gallMob,
+    #comMob,
+    #cerMob,
+    #eventMob,
+    #abMob {
+      font-weight: bolder;
+      font-size: 28px;
+      transition: 0.2s;
+      padding: 5px;
+      border-radius: 25px 25px 25px 25px;
+
+    }
+
+    #homeMob:hover {
+      font-size: 35px;
+    }
+
+    #gallMob:hover {
+      font-size: 35px;
+    }
+
+    #comMob:hover {
+      font-size: 35px;
+    }
+
+    #eventMob:hover {
+      font-size: 35px;
+    }
+
+    #abMob:hover {
+      font-size: 35px;
+    }
+  </style>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top" id="mobHead"
+    style="height: 80px;background-color:#023D4F; border-radius: 0px; border-width: 0px;">
+
+    <span style="padding-top: 3px;">
+      <h2 style="color: white; font-weight: bolder; padding-left: 15px;font-family: geo415m;">IEEE NITP</h2>
+      <span style="display: inline; float: right; margin-top: -50px; color: white;">
+
+        <button type="button" id="btnMob" class="navbar-toggle"
+          style="border-width: 0px; margin-top: 2px; background-color: #1b5060;" data-toggle="collapse">
+
+          <span class="fa fa-bars" style="border-width: 0px; font-size: 30px;"></span>
+
+        </button>
+
+      </span>
+    </span>
+
+    <div class="container-fluid" id="myNavbarMob"
+      style="text-align: center; font-family: geo415m; font-size:10px; border-bottom-right-radius:10px ; border-bottom-left-radius: 10px;background-color: rgba(2,61,79,0.9); margin-top: 27px; ">
+
+      <div id="homeMob" style="font-size:20px; margin-bottom: 3px; margin-top: 2px;"><a href="index.html"
+          style="color: white;">HOME</a></div>
+      <div id="eventMob" style="font-size:20px; margin-bottom: 3px;"><a href="events.html"
+          style="color: white;">EVENTS</a></div>
+      <div id="gallMob" style="font-size:20px; margin-bottom: 3px;"><a href="galleryiotworkshop.html"
+          style="color: white;">GALLERY</a></div>
+      <div id="comMob" style="font-size:20px; margin-bottom: 3px;"><a href="committee.html"
+          style="color: white;">COMMITTEE</a></div>
+      <div id="cerMob"
+        style="font-size:20px; margin-bottom: 3px; background-color: white; width: 160px; margin-left: auto; margin-right: auto; color: #023D4F;">
+        E-CERTI</div>
+      <div id="abMob" style="font-size:20px; margin-bottom: 5px;"><a href="aboutus.html" style="color: white;">ABOUT
+          US</a></div>
+
+    </div>
+
+
+  </nav>
+
+
+  <script>
+    $(document).ready(function () {
+      $("#btnMob").click(function () {
+
+        $("#myNavbarMob").slideToggle("slow");
+      });
+    });
+  </script>
+
+  <!-- End of nav for mobile -->
+
+
+
+
+
+
+
+
+  <div class="text-center" style="font-size: 24px; font-weight: bolder;color: white; margin-top: 37px;">
+
+  </div>
+
+
+  <div class="container" style="margin-top: 108px;">
+
+    <div class="row"
+      style="margin-top: 125px; color: white; background-color: #e0e0e0; margin-top: 40px; margin-bottom: 64px; margin-left: 10px; margin-right: 10px;">
+      <div class="col-lg-6" id="mugg"
+        style="background-color: #303030;  height: 400px; padding-left: 0px; margin-bottom: 0px; padding-bottom: 0px;">
+        <div id="marg"
+          style="padding-top: 30px; background-color: #303030; margin-left: 0px; margin-top: 0px; height: 400px;">
+
+          <div
+            style="margin-left: 50px; margin-bottom: 20px; margin-top: 50px; color: #023D4F; font-family: 'Corbel'; font-size: 20px;font-weight: bolder;">
+            <h2 style="margin-top: 30px; font-family: elkwood; font-size: 150%; color: #d3d3d3;">ENTER YOUR CERTIFICATE
+              NUMBER</h2>
+          </div>
+          <input placeholder=" NITP/IEEE/EVENT_NAME/YEAR/CERTI_NO" id="enterbar"
+            style="color: black; font-weight: bold;  margin-left: 50px; font-size: 12px; border-width: 0px; height: 30px; "
+            type="text" name="certinum">
+          <div style="margin-top: 20px;  font-family: 'Lobster';  width: 300px;">
+            <!--
+
+     <button class="btn btn-danger" style="margin-left: 120px; margin-bottom: 100px; border-radius: 15px; width: 80px;" onclick="fun1();">
+     	Fetch PDF
+     </button>
+
+ -->
+
+          </div>
+          <div class="col-lg-2 text-center" style="margin-top: 5px; margin-left: 33px;">
+
+            <button class="btn btn-default" id="getcerti" onclick="fun1()">
+              <h5 style="font-size: 30px; font-family: elkwood;">GET CERTI</h5>
+            </button>
+            <div><a href="#" id="cer"
+                style="color: white;font-size: 20px; margin-top: 20px; width: 160px; margin-left: -30px; font-family: 'Corbel';">CLICK
+                HERE!</a></div>
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+      <div class="col-lg-6">
+        <img src="cerlog.png" class="img img-responsive" id="mobview"
+          style="width: 70%; float: right; margin-right: 70px;">
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+  <nav class="navbar navbar-default navbar-bottom container-fluid" id="deskview"
+    style="height: 110px;border-radius: 0px;border-width: 0px; background-color:#023D4F; margin-bottom: -40px; margin-top: 25px;  color: white;">
+
+    <div class="row" style="margin-top: 10px;">
+      <div class="col-lg-6 text-center">
+        <p style="font-weight: bolder;font-size: 20px; padding-top:10px;">Follow Us:&nbsp;
+          <a href="https://www.facebook.com/ieee.nitp" target="_blank"><i class="fa fa-facebook fa-2x data"></i></a>
+          &nbsp;&nbsp;
+
+          <a href="mailto:ieeeclub@nitp.ac.in" target="_blank"><i class="fa fa-envelope fa-2x data"></i></a>
+          &nbsp;&nbsp;
+        </p>
+      </div>
+
+      <div class="col-lg-6 text-center" style="margin-top: 10px;">
+        <a href="index.html" style="text-decoration:none;color:white;">Home |</a>
+        <a href="events.html" style="text-decoration:none;color:white;">Events |</a>
+        <a href="gallery.html" style="text-decoration:none;color:white;">Gallery |</a>
+        <a href="committee.html" style="text-decoration:none;color:white;">Committee </a>
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-6 text-center">
+        <p style="font-size:85%; font-weight: normal;">Copyright © IEEE NIT Patna &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="developer.html" style="color: white;">
+            D&D by IEEE WEB TEAM. </a>
+        </p>
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    /*var _0x17e4=['getElementById','num','value','cer','href','certi.png','style'];(function(_0x4d697b,_0x412f5d){var _0x13a220=function(_0x10c543){while(--_0x10c543){_0x4d697b['push'](_0x4d697b['shift']());}};_0x13a220(++_0x412f5d);}(_0x17e4,0xfc));var _0x5292=function(_0x2d36b9,_0x3d98ce){_0x2d36b9=_0x2d36b9-0x0;var _0x2560ad=_0x17e4[_0x2d36b9];return _0x2560ad;};function fun1(){var _0x590c46=document[_0x5292('0x0')](_0x5292('0x1'))[_0x5292('0x2')];if(_0x590c46==0x3039){document[_0x5292('0x0')](_0x5292('0x3'))[_0x5292('0x4')]=_0x5292('0x5');document[_0x5292('0x0')](_0x5292('0x3'))[_0x5292('0x6')]['color']='red';document[_0x5292('0x0')]('cer')[_0x5292('0x6')]['display']='block';}}*/
+
+    function fun1() {
+      var x = document.getElementById('enterbar').value;
+      // console.log(typeof(x));
+
+      if (x) {
+        document.getElementById('cer').style.display = "block";
+        document.getElementById('cer').style.color = "tomato";
+        document.getElementById('cer').href = x + ".jpg";
+
+      }
+
+      /*      if(x=='NITP/IEEE/IMPULSE/2018/01')
+             {
+                document.getElementById('cer').style.display="block";
+                document.getElementById('cer').style.color="tomato";
+                document.getElementById('cer').href=x+".jpg";
+             }
+
+             else if(x=='NITP/IEEE/IMPULSE/2018/02')
+             {
+             	document.getElementById('cer').style.display="block";
+                document.getElementById('cer').style.color="tomato";
+                document.getElementById('cer').href="02.jpg";
+             } */
+    }
+  </script>
+  <!--
+<script type="text/javascript">
+	function fun2()
+	{
+		var x = document.getElementById('myNavbar');
+		x.style.background-color='#0084AD';
+
+	}
+</script>
+-->
+
+
+
+
+
+  <script type="text/javascript">
+    // shim layer with setTimeout fallback
+    window.requestAnimFrame = (function () {
+      return window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        function (callback) {
+          window.setTimeout(callback, 1000 / 23);
+        };
+    })();
+
+
+    $(function () {
+      $(window).resize(function () {
+        $("#playArea").attr({
+          'width': $('body').width(),
+          'height': $('body').height()
+        });
+
+        width = $('body').width();
+        height = $('body').height();
+
+      });
+      $(window).resize();
+    });
+
+    var Point = function () {
+      this._size = 0.5;
+      this._x = 0;
+      this._y = 0;
+      this._direction = 0;
+      this._velocity = 0;
+      this._distances = [];
+      this._neighboors = [];
+      this._randomization = 0;
+
+      this.__collection = null;
+
+
+      this._step = function (aCollection) {
+
+        var modifiedVelocity = this._velocity * 1 * ((Math.random() * this._randomization + 1) / 10);
+        var direction = (Math.random() * 2 % 2 > 1) ? -1 : 1;
+
+        this._direction = this._direction * 1 + ((Math.random() * this._randomization) * direction);
+        var radianAngle = this._direction * Math.PI / 180;
+
+
+        this._x = (this._x * 1) + (modifiedVelocity * Math.cos(radianAngle) * 1);
+        this._y = (this._y * 1) + (modifiedVelocity * Math.sin(radianAngle) * 1);
+
+        if (this._x > width) this._x = 0;
+        if (this._x < 0) this._x = width;
+        if (this._y > height) this._y = 0;
+        if (this._y < 0) this._y = height;
+
+        this.__collection = aCollection;
+
+
+      }
+
+      this._computeNeighboors = function () {
+        if (this.__collection == null) return;
+
+        aCollection = this.__collection;
+        //compute the closest neighboor
+        this._distances = [];
+        for (i = 0; i < aCollection.length; i++) {
+
+          if (aCollection[i]._x != this._x &&
+            aCollection[i]._y != this._y) {
+
+
+            this._distances.push({
+              pointIndex: i,
+              pointObj: aCollection[i],
+              distance: Math.sqrt(
+                Math.pow((this._x - aCollection[i]._x), 2) +
+                Math.pow((this._y - aCollection[i]._y), 2)
+              )
+            });
+          }
+        }
+        this._distances.sort(function (a, b) {
+          defaultReturn = 0;
+          if (a.distance < b.distance) defaultReturn = -1;
+          if (a.distance > b.distance) defaultReturn = 1;
+          return defaultReturn
+
+        });
+
+        this._neighboors = this._distances.slice(0, 3);
+      }
+
+
+      this.draw = function (context) {
+        this._computeNeighboors();
+
+        //draw connection lines
+
+        context.lineWidth = 0.25;
+        context.strokeStyle = '#666';
+
+        context.beginPath();
+        for (i = 0; i < this._neighboors.length; i++) {
+
+          context.moveTo(this._x, this._y);
+          context.lineTo(this._neighboors[i].pointObj._x, this._neighboors[i].pointObj._y);
+
+          context.lineWidth = 0.10 + 5 / this._neighboors[i].distance;
+        }
+        context.closePath();
+
+        context.stroke();
+
+        context.beginPath();
+        context.arc(this._x, this._y, this._size * this._velocity, 0, 2 * Math.PI, false);
+        context.fillStyle = '#999';
+        context.strokeStyle = '#666';
+        context.lineWidth = 0.5;
+        context.fill();
+        context.stroke();
+
+        context.beginPath();
+        context.arc(this._x, this._y, this._size, 0, 2 * Math.PI, false);
+        context.fillStyle = '#666';
+        context.fill();
+
+        //    ctx.fillText(this._direction.toFixed(2), this._x, this._y);
+
+      }
+    }
+
+
+    var aPoints = [];
+    var can, ctx, interval, width, height;
+    var numPoints = 50;
+    /* var distanceTreshold = 100; */
+
+    function init() {
+      can = document.getElementById("playArea");
+      ctx = can.getContext("2d");
+      width = $('body').width();
+      height = $('body').height();
+
+      for (x = 0; x < numPoints; x++) {
+        var newPoint = new Point();
+        newPoint._size = (Math.random() * (3 - 0.5) + 0.5).toFixed(2);
+        newPoint._x = (Math.random() * width).toFixed(0);
+        newPoint._y = (Math.random() * height).toFixed(0);
+        newPoint._direction = (Math.random() * 360).toFixed(2);
+        newPoint._velocity = (Math.random() * (4 - 0.1) + 0.2).toFixed(2);
+        newPoint._randomization = (Math.random() * (10 - 0) + 0).toFixed(2);
+        aPoints.push(newPoint);
+      }
+
+      animate();
+    }
+
+    function animate() {
+      for (x = 0; x < numPoints; x++) {
+        aPoints[x]._step(aPoints);
+      }
+      requestAnimFrame(animate);
+      draw();
+    }
+
+    function draw() {
+      ctx.save();
+
+      ctx.clearRect(0, 0, width, height);
+
+      for (x = 0; x < numPoints; x++) {
+        aPoints[x].draw(ctx);
+      }
+
+      ctx.restore();
+    }
+
+    init();
+  </script>
+
+
+
+
+
+</body>
+
+</html>

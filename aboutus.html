@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#023D4F">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABOUT US</title>
+  <link rel="icon" type="image/png" href="icon.png">
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- font -->
+  <link href='https://fonts.googleapis.com/css?family=Corbel' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Secular+One' rel='stylesheet'>
+
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+  <style type="text/css">
+    html {
+      width: 100%;
+      height: 100%;
+
+
+      margin: 0;
+      padding: 0;
+    }
+
+    #playArea {
+      opacity: 0.5;
+      position: absolute;
+      z-index: -1;
+
+    }
+
+
+    body {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+      font-family: 'corbel';
+      margin: 0%;
+
+
+
+    }
+
+    #developer {
+      font-family: 'Charm';
+      color: white;
+      font-weight: bold;
+      opacity: 0.7;
+
+    }
+
+    #developer:hover {
+      cursor: pointer;
+      ;
+      opacity: 1.0;
+    }
+
+
+
+
+
+
+
+
+    .fa {
+
+      font-size: 40px;
+
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+      /*background: #3B5998;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    /* Twitter */
+    .fa-twitter {
+      /*background: #55ACEE;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    .fa-envelope {
+      /*background: #55ACEE;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    #smalllogo:hover {
+      text-decoration: none;
+    }
+
+
+
+
+
+
+    @font-face {
+      font-family: Geo415M;
+      src: url('Geo415M.ttf');
+    }
+
+    @font-face {
+      font-family: elkwood;
+      src: url('elkwood.otf');
+    }
+
+
+
+    .nav {
+      font-weight: bolder;
+      font-size: 20px;
+    }
+
+    #curr {
+      color: white;
+      transition: 0.3s;
+      border-radius: 25px 25px 25px 25px;
+
+    }
+
+    #curr:hover {
+
+      /*color: green;*/
+      font-size: 30px;
+
+
+
+    }
+
+    #deskview {
+      height: 50px;
+    }
+
+    #about {
+      font-size: 30px;
+
+    }
+
+
+
+    .navbar-default {
+
+
+
+
+
+
+      background-color: #0084AD;
+      background-image: none;
+      background-repeat: no-repeat;
+
+    }
+
+    .img-thumbnail {
+      height: 50px;
+      width: 60px;
+    }
+
+
+
+
+    /******************/
+    /*       Fade Bs-carousel       */
+    /********************************/
+    .fade-carousel {
+      position: relative;
+      height: 100vh;
+    }
+
+    .fade-carousel .carousel-inner .item {
+      height: 100vh;
+    }
+
+    .fade-carousel .carousel-indicators>li {
+      margin: 0 2px;
+      background-color: #f39c12;
+      border-color: #f39c12;
+      opacity: .7;
+    }
+
+    .fade-carousel .carousel-indicators>li.active {
+      width: 10px;
+      height: 10px;
+      opacity: 1;
+    }
+
+    /********************************/
+    /*          Hero Headers        */
+    /********************************/
+    .hero {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 3;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, .75);
+      -webkit-transform: translate3d(-50%, -50%, 0);
+      -moz-transform: translate3d(-50%, -50%, 0);
+      -ms-transform: translate3d(-50%, -50%, 0);
+      -o-transform: translate3d(-50%, -50%, 0);
+      transform: translate3d(-50%, -50%, 0);
+    }
+
+    .hero h1 {
+      font-size: 6em;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+    }
+
+    .fade-carousel .carousel-inner .item .hero {
+      opacity: 0;
+      -webkit-transition: 2s all ease-in-out .1s;
+      -moz-transition: 2s all ease-in-out .1s;
+      -ms-transition: 2s all ease-in-out .1s;
+      -o-transition: 2s all ease-in-out .1s;
+      transition: 2s all ease-in-out .1s;
+    }
+
+    .fade-carousel .carousel-inner .item.active .hero {
+      opacity: 1;
+      -webkit-transition: 2s all ease-in-out .1s;
+      -moz-transition: 2s all ease-in-out .1s;
+      -ms-transition: 2s all ease-in-out .1s;
+      -o-transition: 2s all ease-in-out .1s;
+      transition: 2s all ease-in-out .1s;
+    }
+
+    /********************************/
+    /*            Overlay           */
+    /********************************/
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-color: #080d15;
+      opacity: .7;
+    }
+
+    /********************************/
+    /*          Custom Buttons      */
+    /********************************/
+    .btn.btn-lg {
+      padding: 10px 40px;
+    }
+
+    .btn.btn-hero,
+    .btn.btn-hero:hover,
+    .btn.btn-hero:focus {
+      color: #f5f5f5;
+      background-color: #1abc9c;
+      border-color: #1abc9c;
+      outline: none;
+      margin: 20px auto;
+    }
+
+    /********************************/
+    /*       Slides backgrounds     */
+    /********************************/
+    .fade-carousel .slides .slide-1,
+    .fade-carousel .slides .slide-2,
+    .fade-carousel .slides .slide-3 {
+      height: 80vh;
+      width: 100%;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+
+    }
+
+    .fade-carousel .slides .slide-1 {
+      background-image: url("car2.jpg");
+
+
+    }
+
+    .fade-carousel .slides .slide-2 {
+      background-image: url("car2.jpg");
+    }
+
+    .fade-carousel .slides .slide-3 {
+      background-image: url("ehn.png");
+    }
+
+    .btn {
+      opacity: 0.6;
+      transition: 0.5s;
+    }
+
+    .btn:hover {
+      opacity: 1;
+    }
+
+    /********************************/
+    /*          Media Queries       */
+    /********************************/
+    @media screen and (min-width: 980px) {
+      .hero {
+        width: 980px;
+      }
+
+      #about {
+        font-size: 18px;
+      }
+
+      #todo {
+        height: 75px;
+      }
+
+      #lapview {
+        display: block;
+      }
+
+      #mobview {
+        display: none;
+      }
+
+      #mobHead {
+        display: none;
+      }
+
+      #lapview1 {
+        display: block;
+      }
+
+      #mobview1 {
+        display: none;
+      }
+
+      #recnews {
+        margin-left: 100px;
+      }
+
+      #smalllogo {
+        display: none;
+      }
+
+      #mobHead {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .hero h1 {
+        font-size: 4em;
+      }
+
+      #about {
+        font-size: 16px;
+      }
+
+      #logoindex {
+        display: none;
+      }
+
+      #lapview {
+        display: none;
+      }
+
+      #mobview {
+        display: block;
+      }
+
+      #playArea {
+        display: none;
+      }
+
+      #lapview1 {
+        display: none;
+      }
+
+      #mobview1 {
+        display: block;
+      }
+
+      #pp {
+        display: none;
+      }
+
+      #pp2 {
+        display: none;
+      }
+    }
+
+
+    #welco1,
+    #welco2,
+    #welco3 {
+      display: none;
+    }
+
+
+
+    #pp {
+      font-size: 200px;
+    }
+
+
+    #pp2 {
+      font-size: 200px;
+    }
+
+    #text {
+      color: black;
+
+
+      border-radius: 50%;
+    }
+  </style>
+
+</head>
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--<canvas id="playArea"></canvas>-->
+
+  <nav class="navbar navbar-default navbar-fixed-top container-fluid" id="deskview"
+    style="height: 80px; background-color: #023D4F; font-family:geo415m; font-weight: bolder; border-width: 0px; ">
+    <div class="container-fluid" style="background-color:#023D4F;" id="todo">
+
+      <!--
+    <div class="navbar-header">
+      <a href="index.html" id="smalllogo" style="color: white;font-weight: bolder;font-size: 25px;text-align: center;">IEEE NITP</a>
+      <button type="button" id="bt1" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+
+      </button>  
+    </div>
+-->
+      <a class="navbar-brand" href="index.html"><img id="logoindex" class="img-responsive" src="ieeeLogo.png"
+          style="background-color: #023D4F width: 100px; height: 40px;"></a>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="margin-top: 15px; text-align: center;">
+          <li><a href="index.html" id="curr" id="curr" class="drop1">HOME</a></li>
+
+          <li><a href="events.html" id="curr">EVENTS</a></li>
+
+          <li> <a href="galleryiotworkshop.html" id="curr">GALLERY</a>
+          </li>
+          <li><a href="committee.html" id="curr">COMMITTEE</a></li>
+          <li><a href="ecerti.html" id="curr">E-CERTI</a></li>
+          <li><a href="aboutus.html" id="curr" style="font-size: 20px;
+background-color: white;
+color:#0084AD;">ABOUT US</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- nav for mobile -->
+    <style type="text/css">
+      #myNavbarMob {
+        display: none;
+        background-color: #023D4F;
+        color: white;
+        width: 100%;
+        padding: 0px;
+        cursor: pointer;
+      }
+
+      #homeMob,
+      #gallMob,
+      #comMob,
+      #cerMob,
+      #eventMob,
+      #abMob {
+        font-weight: bolder;
+        font-size: 28px;
+        transition: 0.2s;
+        padding: 5px;
+        border-radius: 25px 25px 25px 25px;
+
+      }
+
+      #homeMob:hover {
+        font-size: 35px;
+      }
+
+      #gallMob:hover {
+        font-size: 35px;
+      }
+
+      #comMob:hover {
+        font-size: 35px;
+      }
+
+      #eventMob:hover {
+        font-size: 35px;
+      }
+
+      #abMob:hover {
+        font-size: 35px;
+      }
+    </style>
+
+
+    <nav class="navbar navbar-default navbar-fixed-top" id="mobHead"
+      style="height: 80px;background-color:#023D4F; border-radius: 0px; border-width: 0px;">
+
+      <span style="padding-top: 3px;">
+        <h2 style="color: white; font-weight: bolder; padding-left: 15px;font-family: geo415m;">IEEE NITP</h2>
+        <span style="display: inline; float: right; margin-top: -50px; color: white;">
+
+          <button type="button" id="btnMob" class="navbar-toggle"
+            style="border-width: 0px; margin-top: 2px; background-color: #1b5060;" data-toggle="collapse">
+
+            <span class="fa fa-bars" style="border-width: 0px; font-size: 30px;"></span>
+
+          </button>
+
+        </span>
+      </span>
+
+      <div class="container-fluid" id="myNavbarMob"
+        style="text-align: center; font-family: geo415m; font-size:10px; border-bottom-right-radius:10px ; border-bottom-left-radius: 10px;background-color: rgba(2,61,79,0.9); margin-top: 27px; ">
+
+        <div id="homeMob" style="font-size:20px; margin-bottom: 3px;"><a href="index.html"
+            style="color: white;">HOME</a></div>
+        <div id="eventMob" style="font-size:20px; margin-bottom: 3px;"><a href="events.html"
+            style="color: white;">EVENTS</a></div>
+        <div id="gallMob" style="font-size:20px; margin-bottom: 3px;"><a href="galleryiotworkshop.html"
+            style="color: white;">GALLERY</a></div>
+        <div id="comMob" style="font-size:20px; margin-bottom: 3px;"><a href="committee.html"
+            style="color: white;">COMMITTEE</a></div>
+        <div id="cerMob" style="font-size:20px; margin-bottom: 3px; "><a href="ecerti.html"
+            style="color: white;">E-CERTI</a></div>
+        <div id="abMob"
+          style="font-size:20px; margin-bottom: 10px; background-color: white; width: 160px; margin-left: auto; margin-right: auto; color: #023D4F;">
+          ABOUT US</div>
+
+      </div>
+
+
+    </nav>
+
+
+    <script>
+      $(document).ready(function () {
+        $("#btnMob").click(function () {
+
+          $("#myNavbarMob").slideToggle("slow");
+        });
+      });
+    </script>
+
+    <!-- End of nav for mobile -->
+
+
+
+
+
+  </nav>
+
+
+
+
+
+
+  <div class="container" style="margin-top:80px;">
+
+
+    <div class="row" id="lapview1">
+
+      <div class="col-sm-8 col-xs-8">
+        <h1 style="text-align: center;font-weight: bolder; font-family: elkwood; font-size: 64px;float: left;">ABOUT
+          IEEE</h1>
+
+      </div>
+
+      <div class="col-sm-4">
+        <img src="icon_ieee.png" class="img img-responsive"
+          style="height: 50%;width: 50%; margin-top: 15px; float: right;">
+      </div>
+
+
+    </div>
+
+    <div class="row" id="mobview1">
+
+      <div class="col-xs-8">
+        <h1 style="text-align: center;font-weight: bolder;font-family: elkwood; font-size: 200%;float: left;">ABOUT IEEE
+        </h1>
+
+      </div>
+
+      <div class="col-xs-4">
+        <img src="icon_ieee.png" class="img img-responsive" style="height: 100%;width: 100%; margin-top: 15px;">
+      </div>
+
+
+    </div>
+
+
+    <div id="about" class="hvrtest1" style="text-align:justify; font-size: 17px;">
+      IEEE is the world's largest professional association dedicated to advancing technological innovation and
+      excellence for the benefit of humanity. IEEE and its members inspire a global community through IEEE's highly
+      cited publications, conferences, technology standards, and professional and educational activities. IEEE,
+      pronounced "Eye-triple-E," stands for the Institute of Electrical and Electronics Engineers. The association is
+      chartered under this name and it is the full legal name.IEEE is the world's largest professional association
+      dedicated to advancing technological innovation and excellence for the benefit of humanity. IEEE and its members
+      inspire a global community through IEEE's highly cited publications, conferences, technology standards, and
+      professional and educational activities. IEEE, pronounced "Eye-triple-E," stands for the Institute of Electrical
+      and Electronics Engineers. The association is chartered under this name and it is the full legal name.
+    </div>
+
+  </div>
+
+  <div class="container" style="margin-top: 50px;">
+
+    <div class="row" id="lapview1">
+
+      <div class="col-sm-8 col-xs-8">
+        <h1 style="text-align: center;font-weight: bolder;font-family: elkwood; font-size: 64px; float: left;">BENIFITS
+          OF IEEE</h1>
+
+      </div>
+
+      <div class="col-sm-4">
+        <img src="icon_ieee.png" class="img img-responsive"
+          style="height: 50%;width: 50%;margin-top: 20px; float: right;">
+      </div>
+
+
+    </div>
+
+    <div class="row" id="mobview1">
+
+      <div class="col-xs-8">
+        <h1 style="text-align: center;font-weight: bolder;font-family: elkwood; font-size: 200%; float: left;">BENIFITS
+          OF IEEE</h1>
+
+      </div>
+
+      <div class="col-xs-4">
+        <img src="icon_ieee.png" class="img img-responsive" style="height: 100%;width: 100%; margin-top: 15px;">
+      </div>
+
+
+    </div>
+
+    <div id="about" class="hvrtest1" style="font-size: 17px; text-align: justify;">
+      IEEE Student Competitions - from programming to humanitarian to robotics, IEEE membership allows you to compete
+      against your peers and have fun simultaneously. <br>IEEE Scholarships, Awards, and Fellowships - enhance your
+      career through a multitude of offerings IEEE Potentials Magazine - filled with technical articles and career
+      information, this publication is created just for students Microsoft Software for Students - in conjunction with
+      Microsoft, IEEE offers a wide selection of development software to student members <br>
+      LabVIEW Student Install Option - this is an exclusive offer from National Instruments for IEEE student and
+      graduate student members in the US and Canada to purchase this product for only US$40<br> Knowledge:
+      IEEE members gain exclusive access to the latest and best research, news, television programs, and educational
+      resources needed to expand their expertise and stay current:
+      <br>
+      <span style="">
+        IEEE Potentials Magazine - 6 issues (online)
+      </span>
+      <br>
+      <span style="">
+        IEEE Spectrum Magazine - 12 monthly issues (print and/or online)
+      </span><br>
+      IEEE TV- internet-based broadcasting network delivering <br>special-interest programming about technology and
+      engineering IEEE Xplore Digital Library - access to table-of-Contents and abstracts (over 2 million documents)<br>
+      The Institute Newsletter - 12 monthly issues (4 print, 8 online)<br>
+      IEEE eBooks Classics - IEEE Press offers members access to over 220 eBooks via IEEE Xplore.
+    </div>
+    <div style="text-align: center;color:#023D4F; font-size: 17px; font-weight: bolder; float: left; margin-top: 17px;">
+      &#8226;&nbsp;COMMUNITY:
+
+    </div>
+    <div style="margin-top: 31px;">
+      <hr style=" height: 5px;">
+    </div>
+
+
+    <div style="text-align: justify; font-size: 17px;">
+
+      As an IEEE member, you are part of the world’s largest community of technology professionals—a network of
+      communication and learning where innovators share what works, what does not, and what is needed now.
+    </div>
+
+
+    <div style="text-align: center;color:#023D4F; font-size: 17px; font-weight: bolder; float: left; margin-top: 17px;">
+      &#8226;&nbsp;PROFESSION:
+    </div>
+
+    <div style="margin-top: 31px;">
+      <hr style="height: 5px;">
+    </div>
+
+
+    <div style="text-align: justify; font-size: 17px;">
+      IEEE members can achieve more of what matters in your life and career through IEEE student programs such as
+      competitions, scholarships, awards, continuing education courses and certifications, conferences, and more:
+      Competitions - hone your engineering skills and have fun Scholarships - enhance your resume with an IEEE
+      scholarship Awards - recognize the accomplishments of your peers Continuing Education Providers Program - up to a
+      10% discount on online degree programs IEEE Job Site - career opportunities for students and professionals Career
+      Alert Newsletter - a bi-weekly e-mail report on jobs, education, management, and the engineering workplace - from
+      the IEEE Job Site and editors of IEEE Spectrum Today's Engineer - monthly e-zine devoted to the issues affecting
+      IEEE member's careers.
+    </div>
+
+
+
+
+    <div style="text-align: center;color:#023D4F; font-size: 17px; font-weight: bolder; float: left; margin-top: 17px;">
+      &#8226;&nbsp;OTHER AVAILABLE MEMBERSHIP:
+    </div>
+
+    <div style="margin-top: 31px;">
+      <hr style="height: 5px;">
+    </div>
+
+    <div style="text-align: justify; font-size: 17px;">
+      IEEE Society - Customize and add value to your IEEE Membership by joining one or more of the 39 IEEE Societies
+      IEEE Standards - Standards are what the IEEE is best known for.
+      IEEE Women in Engineering - Dedicated toward the advancement of women in technical and scientific professions.
+    </div>
+
+
+    <div style="text-align: center;color:#023D4F; font-size: 17px; font-weight: bolder; float: left; margin-top: 17px;">
+      &#8226;&nbsp;IEEE MEMBER DISCOUNTS:
+    </div>
+
+    <div style="margin-top: 31px;">
+      <hr style=" height: 5px;">
+    </div>
+
+    <div style="text-align: justify; font-size: 17px;">
+      Take advantage of member pricing and savings opportunities with these programs (where available) that have been
+      negotiated exclusively for IEEE members:
+      Insurance Services - includes life, health, business, home and renters insurance for you at very competitive rates
+      Technology Discounts - get reduced member pricing on well-known technology products and services Home/Office
+      Discounts - save on moving, shipping and printing services Travel Discounts.
+
+
+      <div
+        style="text-align: center;color:#023D4F; font-size: 17px; font-weight: bolder; float: left; margin-top: 17px;">
+        &#8226;&nbsp;MISC PRODUCTS AVAILABLE TO IEEE MEMBERS:
+      </div>
+
+      <div style="margin-top: 31px;">
+        <hr style=" height: 5px;">
+      </div>
+
+      <div style="text-align: justify; font-size: 17px;">
+        IEEE Member Digital Library - access to one million IEEE documents Proceedings of the IEEE - the leading
+        authoritative resource for in-depth research, coverage, tutorial information and reviews of electrical and
+        computer engineering technology.
+
+
+
+        <div class="container" style="margin-top: 20px; margin-left: -15px;margin-right: -15px;">
+          <div class="row" id="lapview"">
+
+
+    <div class=" col-sm-8 col-xs-8" style="margin-left: 0px;">
+            <h1 style="text-align: center;font-weight: bolder; font-family: elkwood;font-size: 64px; float: left;">ABOUT
+              IEEE NIT PATNA </h1>
+
+          </div>
+
+          <div class="col-sm-4">
+            <img src="nitplogo2.png" class="img img-responsive"
+              style="height: 20%;width: 20%; float: right; margin-top: 15px;">
+          </div>
+
+
+        </div>
+
+        <div class="row" id="mobview">
+
+          <div class="col-xs-8">
+            <h1
+              style="text-align: center;font-weight: bolder; font-family: elkwood;font-size: 140%; margin-left: 0px; float: left;">
+              ABOUT IEEE NIT PATNA </h1>
+
+          </div>
+
+          <div class="col-xs-4">
+            <img src="nitplogo2.png" class="img img-responsive"
+              style="height: 30%;width: 30%; margin-top: 16px; float:right; ">
+          </div>
+
+
+        </div>
+
+
+        <img id="img1" class="img img-responsive"
+          style="height: 100px; display: none; margin:auto; float: left; margin-right: 10px;" src="ehn.png">
+
+        <div id="about" class="hvrtest1" style="font-size: 17px; margin-bottom: 40px; margin-left: 0px;">
+          IEEE Student Branch, NIT Patna was established with an enthusiastic initiative of 13 students of NIT Patna
+          enrolled in B.Tech programme of Electrical Engineering and Electronics and Communication Engineering under the
+          leadership of Prof Kumar Abhishek, Assistant professor of Computer Science and Engineering. In this whole path
+          our mentors were the three great visionaries of our college Dr Asok De (Director NIT Patna), Dr D.K. Singh
+          (HOD, Electronics and Communication Engineering), and Dr M.P Singh (HOD, Computer Science and Engineering).
+          Prof. Kumar Abhishek became the first Branch Counsellor of the Student Branch and Shruti Neha became the first
+          Student Branch Chair. IEEE Student Branch, NITP was established with a vision of making students aware of new
+          developments in various engineering fields and to provide support in implementing new innovative ideas of
+          future engineers which can give a new shape to this world.
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+  </div>
+
+
+
+  <nav class="navbar navbar-default navbar-bottom container-fluid" id="deskview"
+    style="height: 110px;border-width: 0px;border-radius: 0px; padding-top: 10px; margin-bottom: 0px; background-color: #023D4F; color: white;">
+
+    <div class="row" style="margin-top: 10px;">
+      <div class="col-lg-6 text-center">
+        <p style="font-weight: bolder;font-size: 20px;">Follow Us:&nbsp;
+          <a href="https://www.facebook.com/ieee.nitp" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+          &nbsp;&nbsp;
+
+          <a href="mailto:ieeeclub@nitp.ac.in" target="_blank"><i class="fa fa-envelope fa-2x"></i></a>
+          &nbsp;&nbsp;
+        </p>
+      </div>
+
+      <div class="col-lg-6 text-center">
+        <a href="index.html" style="text-decoration:none;color:white;">Home |</a>
+        <a href="events.html" style="text-decoration:none;color:white;">Events |</a>
+        <a href="gallery.html" style="text-decoration:none;color:white;">Gallery |</a>
+        <a href="committee.html" style="text-decoration:none;color:white;">Committee </a>
+
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-6 text-center">
+        <p style="font-size:85%; font-weight: normal;">Copyright © IEEE NIT Patna &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="developer.html" style="color: white;">
+            D&D by IEEE WEB TEAM. </a>
+        </p>
+
+      </div>
+
+    </div>
+
+
+  </nav>
+
+
+
+  <!--
+
+<script type="text/javascript">
+  // shim layer with setTimeout fallback
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 23);
+          };
+})();
+
+
+$(function(){
+  $(window).resize(function(){
+    $("#playArea").attr({
+      'width': $('body').width(),
+      'height': $('body').height()
+    });
+    
+    width = $('body').width();
+    height = $('body').height();
+    
+  });
+  $(window).resize();
+});
+
+var Point = function(){
+  this._size = 0.5;
+  this._x = 0;
+  this._y = 0;
+  this._direction = 0;
+  this._velocity = 0;
+  this._distances = [];
+  this._neighboors = [];
+  this._randomization = 0;
+
+  this.__collection = null;
+  
+  
+  this._step = function(aCollection){
+
+    var modifiedVelocity = this._velocity*1 * ((Math.random() * this._randomization+1)/10);
+    var direction = (Math.random()*2%2 >1)?-1:1;
+
+    this._direction =  this._direction*1 + ((Math.random() * this._randomization) * direction);
+    var radianAngle = this._direction * Math.PI / 180;
+
+    
+    this._x = (this._x * 1) + (modifiedVelocity * Math.cos(radianAngle) * 1);
+    this._y = (this._y * 1) + (modifiedVelocity * Math.sin(radianAngle) * 1);
+
+    if(this._x > width) this._x = 0;
+    if(this._x < 0) this._x = width;
+    if(this._y > height) this._y = 0;
+    if(this._y < 0) this._y = height;
+ 
+    this.__collection = aCollection;
+    
+
+  }
+  
+  this._computeNeighboors = function() {
+    if(this.__collection == null)  return;
+
+    aCollection = this.__collection;
+    //compute the closest neighboor
+    this._distances = [];
+    for(i=0; i < aCollection.length; i++){
+      
+      if(aCollection[i]._x != this._x &&
+         aCollection[i]._y != this._y){
+
+
+        this._distances.push({
+          pointIndex: i,
+          pointObj: aCollection[i],
+          distance: Math.sqrt( 
+            Math.pow((this._x - aCollection[i]._x), 2) + 
+            Math.pow((this._y - aCollection[i]._y), 2)
+          )
+        });
+      }
+    }
+    this._distances.sort(function(a,b){ 
+      defaultReturn = 0;
+      if(a.distance < b.distance) defaultReturn = -1;
+      if(a.distance > b.distance) defaultReturn = 1;
+      return defaultReturn
+
+    });
+    
+    this._neighboors = this._distances.slice(0,3);
+  }
+
+  
+  this.draw = function(context){
+    this._computeNeighboors();
+    
+    //draw connection lines
+    
+    context.lineWidth = 0.25;
+    context.strokeStyle = '#666';
+    
+    context.beginPath();    
+    for(i=0; i<this._neighboors.length; i++) {
+
+        context.moveTo(this._x, this._y);
+        context.lineTo(this._neighboors[i].pointObj._x,   this._neighboors[i].pointObj._y);
+      
+        context.lineWidth = 0.10 + 5 / this._neighboors[i].distance;
+    }
+    context.closePath();
+
+    context.stroke();
+    
+    context.beginPath();
+    context.arc(this._x, this._y, this._size*this._velocity, 0, 2 * Math.PI, false);
+    context.fillStyle = '#999';
+    context.strokeStyle = '#666';
+    context.lineWidth = 0.5;
+    context.fill();
+    context.stroke();
+    
+    context.beginPath();
+    context.arc(this._x, this._y, this._size, 0, 2 * Math.PI, false);
+    context.fillStyle = '#666';
+    context.fill();
+    
+//    ctx.fillText(this._direction.toFixed(2), this._x, this._y);
+    
+  }
+}
+
+var aPoints = [];
+var can, ctx, interval, width, height;
+var numPoints = 50;
+/* var distanceTreshold = 100; */
+
+function init() {
+  can = document.getElementById("playArea");
+  ctx = can.getContext("2d");
+  width = $('body').width();
+  height = $('body').height();
+  
+  for(x=0; x<numPoints; x++){
+    var newPoint = new Point();
+    newPoint._size = (Math.random() * (3 - 0.5) + 0.5).toFixed(2);
+    newPoint._x = (Math.random() * width).toFixed(0);
+    newPoint._y = (Math.random() * height).toFixed(0);
+    newPoint._direction = (Math.random() * 360).toFixed(2);
+    newPoint._velocity = (Math.random() * (4 - 0.1) + 0.2).toFixed(2);
+    newPoint._randomization = (Math.random() * (10 - 0) + 0).toFixed(2);
+    aPoints.push(newPoint);
+  }
+
+  animate();
+}
+
+function animate(){
+  for(x=0; x<numPoints; x++){
+    aPoints[x]._step(aPoints);
+  }
+  requestAnimFrame( animate );
+  draw();
+}
+
+function draw(){
+  ctx.save();
+
+  ctx.clearRect(0,0,width,height);
+  
+  for(x=0; x<numPoints; x++){
+    aPoints[x].draw(ctx);
+  }
+  
+  ctx.restore();
+}
+
+init();
+</script>
+-->
+
+
+</body>
+
+</html>

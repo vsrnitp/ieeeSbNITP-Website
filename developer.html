@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MEET THE DEVS</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- font -->
+    <link href='https://fonts.googleapis.com/css?family=Corbel' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Secular+One' rel='stylesheet'>
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+
+    <style type="text/css">
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
+
+
+        #playArea {
+            opacity: 0.5;
+            position: absolute;
+            z-index: -1;
+
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            line-height: 1.5;
+            color: #323232;
+            font-size: 15px;
+            font-weight: 400;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-font-smoothing: antialiased;
+            color: white;
+            background-color: black;
+        }
+
+        @font-face {
+            font-family: Geo415M;
+            src: url('Geo415M.ttf');
+        }
+
+        @font-face {
+            font-family: elkwood;
+            src: url('elkwood.otf');
+        }
+
+
+        .heading-title {
+            margin-bottom: 100px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .heading-title h3 {
+            margin-bottom: 0;
+            letter-spacing: 2px;
+            font-weight: normal;
+        }
+
+        .p-top-30 {
+            padding-top: 30px;
+        }
+
+        .half-txt {
+            width: 60%;
+            margin: 0 auto;
+            display: inline-block;
+            line-height: 25px;
+            color: #7e7e7e;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+
+        .team-member,
+        .team-member .team-img {
+            position: relative;
+        }
+
+        .team-member {
+            overflow: hidden;
+        }
+
+        .team-member,
+        .team-member .team-img {
+            position: relative;
+        }
+
+        .team-hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+            border: 20px solid rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.90);
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .team-member:hover .team-hover .desk {
+            top: 35%;
+        }
+
+        .team-member:hover .team-hover,
+        .team-member:hover .team-hover .desk,
+        .team-member:hover .team-hover .s-link {
+            opacity: 1;
+        }
+
+        .team-hover .desk {
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            opacity: 0;
+            -webkit-transform: translateY(-55%);
+            transform: translateY(-55%);
+            transition: all 0.3s 0.2s;
+            padding: 0 20px;
+        }
+
+        .desk,
+        .desk h4,
+        .team-hover .s-link a {
+            text-align: center;
+            color: #222;
+        }
+
+        .team-member:hover .team-hover .s-link {
+            bottom: 10%;
+        }
+
+        .team-member:hover .team-hover,
+        .team-member:hover .team-hover .desk,
+        .team-member:hover .team-hover .s-link {
+            opacity: 1;
+        }
+
+        .team-hover .s-link {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            opacity: 0;
+            text-align: center;
+            -webkit-transform: translateY(45%);
+            transform: translateY(45%);
+            transition: all 0.3s 0.2s;
+            font-size: 35px;
+        }
+
+        .desk,
+        .desk h4,
+        .team-hover .s-link a {
+            text-align: center;
+            color: #222;
+        }
+
+        .team-member .s-link a {
+            margin: 0 10px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .team-title {
+            position: static;
+            padding: 20px 0;
+            display: inline-block;
+            letter-spacing: 2px;
+            width: 100%;
+        }
+
+        .team-title h5 {
+            margin-bottom: 0px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        .team-title span {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #a5a5a5;
+            letter-spacing: 1px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #hideMe {
+                display: none;
+            }
+
+            #playArea {
+                display: none;
+            }
+
+            .team-hover {
+                border: 0px;
+            }
+
+            .desk {
+                font-size: 12px;
+            }
+
+            .s-link {
+                font-size: 14px;
+            }
+        }
+
+        @media only screen and (min-width: 600px) {
+            #showMe {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="playArea"></canvas>
+    <div class="container">
+
+        <div id="hideMe">
+            <div class="row">
+
+                <h1 class="text-uppercase"
+                    style="text-align: center; margin-bottom: 80px; font-weight: bolder; font-size: 500%; margin-top: 50PX; color: #dcdcdc; padding-top: 5px;">
+                    DEVELOPERS</h1>
+                <!--<p class="p-top-30 half-txt" style="font-weight: bolder;">Developing awesome webistes, both UI/UX as well as backend portions.</p>-->
+
+
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="vsr.jpg" alt="team member" class="img-responsive" style=" border-radius: 0px;">
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h4>Hey there!!</h4>
+                                <p>I love to introduce myself as a Web Developer and a Node enthusiast.</p>
+                            </div>
+                            <div class="s-link">
+                                <a href="https://www.facebook.com/vsr2308"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/vsr2786/"><i class="fa fa-instagram"></i></a>
+                                <a href="mailto:vsrnitp@gmail.com"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>Vishwajeet Singh</h5>
+                        <span>Lead WEB Dev</span>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-3 col-sm-3 col-xs-12">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="agrox29.jpeg" alt="team member" class="img-responsive"
+                                style="border-radius: 0px;">
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h4>Hola Amigos!</h4>
+                                <p></p>
+                            </div>
+                            <div class="s-link">
+                                <a href="https://www.facebook.com/agrox29"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/the.heisenberg/"><i class="fa fa-instagram"></i></a>
+                                <a href="mailto:agrox29@gmail.com"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>Anurag Gupta</h5>
+                        <span>WEB DEV</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="anubhav.jpg" class="img-responsive" style="border-radius: 0px;">
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h4>I love to design Frontend</h4>
+                                <p>I love to introduce myself as a hardcore Web Designer.</p>
+                            </div>
+                            <div class="s-link">
+                                <a href="https://www.facebook.com/Feel.ak47"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/anubhav170579.ak/"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a href="mailto:anubhav170579.ak@gmail.com"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>Anubhav Kumar</h5>
+                        <span>WEB Dev</span>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-3">
+                    <div class="team-member">
+                        <div class="team-img">
+                            <img src="umang.jpg" alt="team member" class="img-responsive" style=" border-radius: 0px;">
+                        </div>
+                        <div class="team-hover">
+                            <div class="desk">
+                                <h4>I love to develop Frontend.</h4>
+                                <p>I love to introduce myself as a hardcore CSS enthusiast.</p>
+                            </div>
+                            <div class="s-link">
+                                <a href="https://www.facebook.com/dipak.jajodia.3"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/umang_jajodia/"><i class="fa fa-instagram"></i></a>
+                                <a href="mailto:umangjajodia4@gmail.com"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-title">
+                        <h5>Umang Jajodia</h5>
+                        <span>Web Dev</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- For mobile -->
+
+    <div class="container" id="showMe">
+        <div class="text-center" style="margin-bottom: 30px;">
+            <h1 style=" font-family: geo415m; font-weight: bolder;">DEVELOPERS</h1>
+        </div>
+        <div class="row">
+
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="vsr.jpg" alt="team member" class="img-responsive" style=" border-radius: 0px;">
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk" style="font-size: 12px;">
+                            <h5>Hey there!!</h5>
+                            <p>I love to introduce myself as a Web Developer and a Node enthusiast.</p>
+                        </div>
+                        <div class="s-link" style="font-size: 14px;">
+                            <a href="https://www.facebook.com/vsr2308"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/vsr2786/"><i class="fa fa-instagram"></i></a>
+                            <a href="mailto:vsrnitp@gmail.com"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-title">
+                    <h5>Vishwajeet Singh</h5>
+                    <span>Lead WEB Dev</span>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="agrox29.jpeg" alt="team member" class="img-responsive" style="border-radius: 0px;">
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk">
+                            <h5>Hola Amigos!</h5>
+                            <p></p>
+                        </div>
+                        <div class="s-link">
+                            <a href="https://www.facebook.com/agrox29"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/the.heisenberg/"><i class="fa fa-instagram"></i></a>
+                            <a href="mailto:agrox29@gmail.com"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-title">
+                    <h5>Anurag Gupta</h5>
+                    <span>WEB DEV</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="anubhav.jpg" class="img-responsive" style="border-radius: 0px;">
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk">
+                            <h5>I love to design Frontend</h5>
+                            <p>I love to introduce myself as a hardcore Web Designer.</p>
+                        </div>
+                        <div class="s-link">
+                            <a href="https://www.facebook.com/Feel.ak47"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/anubhav170579.ak/"><i class="fa fa-instagram"></i></a>
+                            <a href="mailto:anubhav170579.ak@gmail.com"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-title">
+                    <h5>Anubhav Kumar</h5>
+                    <span>WEB Dev</span>
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div class="team-member">
+                    <div class="team-img">
+                        <img src="umang.jpg" alt="team member" class="img-responsive" style=" border-radius: 0px;">
+                    </div>
+                    <div class="team-hover">
+                        <div class="desk">
+                            <h5>I love to develop Frontend.</h5>
+                            <p>I love to introduce myself as a hardcore CSS enthusiast.</p>
+                        </div>
+                        <div class="s-link">
+                            <a href="https://www.facebook.com/dipak.jajodia.3"><i class="fa fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/umang_jajodia/"><i class="fa fa-instagram"></i></a>
+                            <a href="mailto:umangjajodia4@gmail.com"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-title">
+                    <h5>Umang Jajodia</h5>
+                    <span>Web Dev</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+
+
+
+    <script type="text/javascript">
+        // shim layer with setTimeout fallback
+        window.requestAnimFrame = (function () {
+            return window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                function (callback) {
+                    window.setTimeout(callback, 1000 / 23);
+                };
+        })();
+
+
+        $(function () {
+            $(window).resize(function () {
+                $("#playArea").attr({
+                    'width': $('body').width(),
+                    'height': $('body').height()
+                });
+
+                width = $('body').width();
+                height = $('body').height();
+
+            });
+            $(window).resize();
+        });
+
+        var Point = function () {
+            this._size = 0.5;
+            this._x = 0;
+            this._y = 0;
+            this._direction = 0;
+            this._velocity = 0;
+            this._distances = [];
+            this._neighboors = [];
+            this._randomization = 0;
+
+            this.__collection = null;
+
+
+            this._step = function (aCollection) {
+
+                var modifiedVelocity = this._velocity * 1 * ((Math.random() * this._randomization + 1) / 10);
+                var direction = (Math.random() * 2 % 2 > 1) ? -1 : 1;
+
+                this._direction = this._direction * 1 + ((Math.random() * this._randomization) * direction);
+                var radianAngle = this._direction * Math.PI / 180;
+
+
+                this._x = (this._x * 1) + (modifiedVelocity * Math.cos(radianAngle) * 1);
+                this._y = (this._y * 1) + (modifiedVelocity * Math.sin(radianAngle) * 1);
+
+                if (this._x > width) this._x = 0;
+                if (this._x < 0) this._x = width;
+                if (this._y > height) this._y = 0;
+                if (this._y < 0) this._y = height;
+
+                this.__collection = aCollection;
+
+
+            }
+
+            this._computeNeighboors = function () {
+                if (this.__collection == null) return;
+
+                aCollection = this.__collection;
+                //compute the closest neighboor
+                this._distances = [];
+                for (i = 0; i < aCollection.length; i++) {
+
+                    if (aCollection[i]._x != this._x &&
+                        aCollection[i]._y != this._y) {
+
+
+                        this._distances.push({
+                            pointIndex: i,
+                            pointObj: aCollection[i],
+                            distance: Math.sqrt(
+                                Math.pow((this._x - aCollection[i]._x), 2) +
+                                Math.pow((this._y - aCollection[i]._y), 2)
+                            )
+                        });
+                    }
+                }
+                this._distances.sort(function (a, b) {
+                    defaultReturn = 0;
+                    if (a.distance < b.distance) defaultReturn = -1;
+                    if (a.distance > b.distance) defaultReturn = 1;
+                    return defaultReturn
+
+                });
+
+                this._neighboors = this._distances.slice(0, 3);
+            }
+
+
+            this.draw = function (context) {
+                this._computeNeighboors();
+
+                //draw connection lines
+
+                context.lineWidth = 0.25;
+                context.strokeStyle = '#666';
+
+                context.beginPath();
+                for (i = 0; i < this._neighboors.length; i++) {
+
+                    context.moveTo(this._x, this._y);
+                    context.lineTo(this._neighboors[i].pointObj._x, this._neighboors[i].pointObj._y);
+
+                    context.lineWidth = 0.10 + 5 / this._neighboors[i].distance;
+                }
+                context.closePath();
+
+                context.stroke();
+
+                context.beginPath();
+                context.arc(this._x, this._y, this._size * this._velocity, 0, 2 * Math.PI, false);
+                context.fillStyle = '#999';
+                context.strokeStyle = '#666';
+                context.lineWidth = 0.5;
+                context.fill();
+                context.stroke();
+
+                context.beginPath();
+                context.arc(this._x, this._y, this._size, 0, 2 * Math.PI, false);
+                context.fillStyle = '#666';
+                context.fill();
+
+                //    ctx.fillText(this._direction.toFixed(2), this._x, this._y);
+
+            }
+        }
+
+
+        var aPoints = [];
+        var can, ctx, interval, width, height;
+        var numPoints = 50;
+        /* var distanceTreshold = 100; */
+
+        function init() {
+            can = document.getElementById("playArea");
+            ctx = can.getContext("2d");
+            width = $('body').width();
+            height = $('body').height();
+
+            for (x = 0; x < numPoints; x++) {
+                var newPoint = new Point();
+                newPoint._size = (Math.random() * (3 - 0.5) + 0.5).toFixed(2);
+                newPoint._x = (Math.random() * width).toFixed(0);
+                newPoint._y = (Math.random() * height).toFixed(0);
+                newPoint._direction = (Math.random() * 360).toFixed(2);
+                newPoint._velocity = (Math.random() * (4 - 0.1) + 0.2).toFixed(2);
+                newPoint._randomization = (Math.random() * (10 - 0) + 0).toFixed(2);
+                aPoints.push(newPoint);
+            }
+
+            animate();
+        }
+
+        function animate() {
+            for (x = 0; x < numPoints; x++) {
+                aPoints[x]._step(aPoints);
+            }
+            requestAnimFrame(animate);
+            draw();
+        }
+
+        function draw() {
+            ctx.save();
+
+            ctx.clearRect(0, 0, width, height);
+
+            for (x = 0; x < numPoints; x++) {
+                aPoints[x].draw(ctx);
+            }
+
+            ctx.restore();
+        }
+
+        init();
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

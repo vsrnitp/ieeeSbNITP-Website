@@ -1,0 +1,3708 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#023D4F">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COMMITTEE</title>
+  <link rel="icon" type="image/png" href="icon.png">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- font -->
+  <link href='https://fonts.googleapis.com/css?family=Corbel' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Charm' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Anton' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Secular+One' rel='stylesheet'>
+
+  <!-- icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style type="text/css">
+    body {
+      font-family: 'Corbel';
+      margin: 0%;
+
+
+
+    }
+
+
+
+    .fa {
+
+      font-size: 40px;
+
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+    }
+
+    /* Add a hover effect if you want */
+    .fa:hover {
+      opacity: 0.7;
+    }
+
+    /* Set a specific color for each brand */
+
+    /* Facebook */
+    .fa-facebook {
+      /*background: #3B5998;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    /* Twitter */
+    .fa-twitter {
+      /*background: #55ACEE;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    .fa-envelope {
+      /*background: #55ACEE;*/
+      color: white;
+      font-size: 24px;
+    }
+
+    @font-face {
+      font-family: Geo415M;
+      src: url('Geo415M.ttf');
+    }
+
+    @font-face {
+      font-family: elkwood;
+      src: url('elkwood.otf');
+    }
+
+    .nav {
+      font-weight: bolder;
+      font-size: 20px;
+      font-family: geo415m;
+    }
+
+    #curr {
+      color: white;
+      transition: 0.3s;
+      border-radius: 25px 25px 25px 25px;
+
+    }
+
+    #curr:hover {
+
+      /*color: green;*/
+      font-size: 30px;
+
+
+
+    }
+
+    #deskview {
+      height: 50px;
+    }
+
+    #about {
+      font-size: 30px;
+
+    }
+
+    #smalllogo:hover {
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 979px) {
+      #logoindex {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 980px) {
+      #smalllogo {
+        display: none;
+      }
+    }
+
+
+    .navbar-default {
+
+
+
+
+
+
+      background-color: #0084AD;
+      background-image: none;
+      background-repeat: no-repeat;
+      height: 200px;
+
+    }
+
+    .img-thumbnail {
+      height: 50px;
+      width: 60px;
+    }
+
+    .team-member,
+    .team-member .team-img {
+      position: relative;
+    }
+
+    .team-member {
+      overflow: hidden;
+    }
+
+    .team-member,
+    .team-member .team-img {
+      position: relative;
+    }
+
+    .team-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+      border: 0px;
+      background-color: #f0f0f0;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+
+    .team-member:hover .team-hover .desk {
+      top: 35%;
+    }
+
+    .team-member:hover .team-hover,
+    .team-member:hover .team-hover .desk,
+    .team-member:hover .team-hover .s-link {
+      opacity: 1;
+    }
+
+    .team-hover .desk {
+      position: absolute;
+      top: 0%;
+      width: 100%;
+      opacity: 0;
+      -webkit-transform: translateY(-55%);
+      transform: translateY(-55%);
+      transition: all 0.3s 0.2s;
+      padding: 0 20px;
+    }
+
+    .desk,
+    .desk h4,
+    .team-hover .s-link a {
+      text-align: center;
+      color: #222;
+    }
+
+    .team-member:hover .team-hover .s-link {
+      bottom: 10%;
+    }
+
+    .team-member:hover .team-hover,
+    .team-member:hover .team-hover .desk,
+    .team-member:hover .team-hover .s-link {
+      opacity: 1;
+    }
+
+    .team-hover .s-link {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      opacity: 0;
+      text-align: center;
+      -webkit-transform: translateY(45%);
+      transform: translateY(45%);
+      transition: all 0.3s 0.2s;
+      font-size: 35px;
+    }
+
+    .desk,
+    .desk h4,
+    .team-hover .s-link a {
+      text-align: center;
+      color: #222;
+    }
+
+    .team-member .s-link a {
+      margin: 0 10px;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .team-title {
+      position: static;
+      padding: 20px 0;
+      display: inline-block;
+      letter-spacing: 2px;
+      width: 100%;
+    }
+
+    .team-title h5 {
+      margin-bottom: 0px;
+      display: block;
+      text-transform: uppercase;
+    }
+
+    .team-title span {
+      font-size: 12px;
+      text-transform: uppercase;
+      color: #a5a5a5;
+      letter-spacing: 1px;
+    }
+
+    #prcomtext,
+    #lastcomtext,
+    #slastcomtext,
+    #tlastcomtext:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 979px) {
+
+      #vrd1,
+      #vrd2 {
+        display: none;
+      }
+
+      #archivebtn {
+        margin-left: 150px;
+        margin-top: 15px;
+      }
+
+      #backbtn {
+        margin-left: 130px;
+        margin-top: 15px;
+      }
+
+      #bottom {
+        margin-left: 170px;
+      }
+
+      #imgtop {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+
+      #imgbot {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        transform: rotate(90deg);
+
+
+      }
+
+      #resp {
+        height: 290px;
+        width: 250px;
+      }
+
+      #styleme {
+        font-size: 130%;
+      }
+
+      #styleus {
+        font-size: 130%;
+      }
+
+    }
+
+    @media screen and (min-width: 980px) {
+
+      #hrd1,
+      #hrd2 {
+        display: none;
+      }
+
+      #todo {
+        height: 75px;
+      }
+
+      #archivebtn {
+        margin-left: 530px;
+        margin-top: 30px;
+      }
+
+      #backbtn {
+        margin-left: 500px;
+        margin-top: 30px;
+      }
+
+      #mobHead {
+        display: none;
+      }
+
+      #resp {
+        height: 290px;
+        width: 250px;
+      }
+
+      #showinmobile {
+        display: none;
+      }
+
+      #styleme {
+        font-size: 200%;
+      }
+
+      #styleus {
+        font-size: 200%;
+      }
+
+      #imgtop {
+        margin-left: 190px;
+      }
+
+      #imgbot {
+        margin-right: 170px;
+      }
+
+    }
+
+    @media screen and (max-width: 979px) {
+
+      #imgtop {
+        margin-left: 150px;
+      }
+
+      #imgbot {
+        margin-left: -20px;
+      }
+
+      #hidemeinmobile {
+        display: none;
+      }
+
+      #recent {
+        display: none;
+      }
+
+
+    }
+
+
+    .flip {
+      -webkit-perspective: 800;
+      perspective: 800;
+      position: relative;
+      text-align: center;
+    }
+
+    .flip .card.flipped {
+      -webkit-transform: rotatey(-180deg);
+      transform: rotatey(-180deg);
+    }
+
+    .flip .card {
+      width: 100%;
+      height: 300px;
+      -webkit-transform-style: preserve-3d;
+      -webkit-transition: 0.5s;
+      transform-style: preserve-3d;
+      transition: 1.0s;
+      background-color: #fff;
+
+    }
+
+    .flip .card .face {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      z-index: 2;
+    }
+
+    .flip .card .front {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .flip .card .front img {
+      width: 100%;
+      height: 250px;
+    }
+
+    .flip .card .img {
+      position: relaitve;
+      width: 100%;
+      height: 250px;
+      z-index: 1;
+      border: 2px solid #000;
+    }
+
+    .flip .card .back {
+      padding-top: 10%;
+      -webkit-transform: rotatey(-180deg);
+      transform: rotatey(-180deg);
+      position: absolute;
+    }
+
+    .inner {
+      margin: 0px !important;
+      width: 100%;
+    }
+
+    .check {
+      margin-bottom: 50px;
+
+    }
+
+    #lastcom {
+      display: none;
+    }
+
+    #slastcom {
+      display: none;
+    }
+
+    #tlastcom {
+      display: none;
+    }
+
+    #backbtn {
+      display: none;
+    }
+  </style>
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#headpage").hover(function () {
+        $(this).css("transition", "4s");
+        $("#hrcom1").css("transition", "4s");
+        $(this).css("color", "#0084AD");
+        $("#hrcom1").css("width", "500px");
+        // $("#hrcom1").css("transform", "rotatey(360deg)");
+
+
+      }, function () {
+        $(this).css("color", "black");
+        //$("#hrcom1").css("transform", "rotatey(360deg)");
+        $("#hrcom1").css("width", "300px");
+        //$("#img1").fadeOut(3000);
+
+      });
+    });
+  </script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#prcomtext").click(function () {
+        $("#prcomtext").css("color", "#0084AD");
+        $("#lastcomtext").css("color", "black");
+        $("#slastcomtext").css("color", "black");
+        $("#tlastcomtext").css("color", "black");
+
+        $("#prescom").css("display", "block");
+        $("#lastcom").css("display", "none");
+        $("#slastcom").css("display", "none");
+        $("#tlastcom").css("display", "none");
+      });
+    });
+
+    $(document).ready(function () {
+      $("#lastcomtext").click(function () {
+        $("#prcomtext").css("color", "black");
+        $("#lastcomtext").css("color", "#0084AD");
+        $("#slastcomtext").css("color", "black");
+        $("#tlastcomtext").css("color", "black");
+
+        $("#prescom").css("display", "none");
+        $("#lastcom").css("display", "block");
+        $("#slastcom").css("display", "none");
+        $("#tlastcom").css("display", "none");
+      });
+    });
+
+
+
+    $(document).ready(function () {
+      $("#slastcomtext").click(function () {
+        $("#prcomtext").css("color", "black");
+        $("#lastcomtext").css("color", "black");
+        $("#slastcomtext").css("color", "#0084AD");
+        $("#tlastcomtext").css("color", "black");
+
+        $("#prescom").css("display", "none");
+        $("#lastcom").css("display", "none");
+        $("#slastcom").css("display", "block");
+        $("#tlastcom").css("display", "none");
+      });
+    });
+
+    $(document).ready(function () {
+      $("#tlastcomtext").click(function () {
+        $("#prcomtext").css("color", "black");
+        $("#lastcomtext").css("color", "black");
+        $("#slastcomtext").css("color", "black");
+        $("#tlastcomtext").css("color", "#0084AD");
+
+        $("#prescom").css("display", "none");
+        $("#lastcom").css("display", "none");
+        $("#slastcom").css("display", "none");
+        $("#tlastcom").css("display", "block");
+      });
+    });
+
+
+
+
+    $(document).ready(function () {
+      $("#archivebtn").click(function () {
+        $("#archivebtn").css("display", "none");
+        $("#backbtn").css("display", "block");
+        // $("#recent").css("display","block");
+        // $("#recent").css("background-color","white");
+        $("#recent").css("color", "black");
+        $("#prescom").css("display", "none");
+        $("#lastcom").css("display", "none");
+        $("#slastcom").css("display", "none");
+        $("#tlastcom").css("display", "none");
+        $("body").css("transition", "0.2s");
+        $("body").css("background-color", "white");
+        $("body").css("color", "black");
+        $("#navbot").css("display", "none");
+        // $("#headpage").css("color","white");
+      });
+    });
+
+    $(document).ready(function () {
+      $("#backbtn").click(function () {
+        $("#archivebtn").css("display", "block");
+        $("#backbtn").css("display", "none");
+        $("#recent").css("display", "block");
+        $("#recent").css("color", "black");
+        $("#prescom").css("display", "none");
+        $("#lastcom").css("display", "none");
+        $("#slastcom").css("display", "none");
+        $("#tlastcom").css("display", "none");
+        $("#navbot").css("display", "block");
+        $("body").css("background-color", "white");
+        $("body").css("color", "black");
+        //  $("#headpage").css("color","black");
+      });
+    });
+
+    // for incrementing the size of logo on hovering
+  </script>
+
+</head>
+
+
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+
+  <nav class="navbar navbar-default navbar-fixed-top container-fluid" id="deskview"
+    style="height: 80px;background-color:#023D4F; border-radius: 0px; border-width: 0px;">
+    <div class="container-fluid" id="todo" style="background-color:#023D4F; ">
+      <!--
+    <div class="navbar-header">
+    		<a href="index.html" id="smalllogo" style="color: white;font-weight: bolder;font-size: 25px;text-align: center;">IEEE NITP</a>
+      <button type="button" id="bt1" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+
+      </button>
+      
+    </div>
+  -->
+      <a class="navbar-brand" href="index.html"><img id="logoindex" src="ieeeLogo.png"
+          style="background-color: #023D4F; width: 100px; height: 40px;"></a>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right" style="margin-top: 15px; text-align: center;">
+          <li><a href="index.html" id="curr">HOME</a></li>
+
+          <li><a href="events.html" id="curr">EVENTS</a></li>
+
+          <li> <a href="galleryiotworkshop.html" id="curr" class="drop1">GALLERY</a>
+          </li>
+          <li><a href="committee.html" id="curr" style="font-size: 20px;
+background-color: white;
+color:#0084AD;">COMMITTEE</a></li>
+          <li><a href="ecerti.html" id="curr">E-CERTI</a></li>
+          <li><a href="aboutus.html" id="curr">ABOUT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- nav for mobile -->
+  <style type="text/css">
+    #myNavbarMob {
+      display: none;
+      background-color: #023D4F;
+      color: white;
+      width: 100%;
+      padding: 0px;
+      cursor: pointer;
+    }
+
+    #homeMob,
+    #gallMob,
+    #comMob,
+    #cerMob,
+    #eventMob,
+    #abMob {
+      font-weight: bolder;
+      font-size: 28px;
+      transition: 0.2s;
+      padding: 5px;
+      border-radius: 25px 25px 25px 25px;
+
+    }
+
+    #homeMob:hover {
+      font-size: 35px;
+    }
+
+    #gallMob:hover {
+      font-size: 35px;
+    }
+
+    #comMob:hover {
+      font-size: 35px;
+    }
+
+    #eventMob:hover {
+      font-size: 35px;
+    }
+
+    #abMob:hover {
+      font-size: 35px;
+    }
+  </style>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top" id="mobHead"
+    style="height: 80px;background-color:#023D4F; border-radius: 0px; border-width: 0px;">
+
+    <span style="padding-top: 3px;">
+      <h2 style="color: white; font-weight: bolder; padding-left: 15px;font-family: geo415m;">IEEE NITP</h2>
+      <span style="display: inline; float: right; margin-top: -50px; color: white;">
+
+        <button type="button" id="btnMob" class="navbar-toggle"
+          style="border-width: 0px; margin-top: 2px; background-color: #1b5060;" data-toggle="collapse">
+
+          <span class="fa fa-bars" style="border-width: 0px; font-size: 30px;"></span>
+
+        </button>
+
+      </span>
+    </span>
+
+    <div class="container-fluid" id="myNavbarMob"
+      style="text-align: center; font-family: geo415m; font-size:10px; border-bottom-right-radius:10px ; border-bottom-left-radius: 10px;background-color: rgba(2,61,79,0.9); margin-top: 27px; ">
+      <div id="homeMob" style="font-size:20px; margin-bottom: 3px;"><a href="index.html" style="color: white;">HOME</a>
+      </div>
+      <div id="eventMob" style="font-size:20px; margin-bottom: 3px;"><a href="events.html"
+          style="color: white;">EVENTS</a></div>
+      <div id="gallMob" style="font-size:20px; margin-bottom: 3px;"><a href="galleryiotworkshop.html"
+          style="color: white;">GALLERY</a></div>
+      <div id="comMob"
+        style="font-size:20px; margin-bottom: 3px; background-color: white; width: 160px; margin-left: auto; margin-right: auto; color: #023D4F;">
+        COMMITTEE</div>
+      <div id="cerMob" style="font-size:20px; margin-bottom: 3px; "><a href="ecerti.html"
+          style="color: white;">E-CERTI</a></div>
+      <div id="abMob" style="font-size:20px; margin-bottom: 5px;"><a href="aboutus.html" style="color: white;">ABOUT
+          US</a></div>
+
+    </div>
+
+
+  </nav>
+
+
+  <script>
+    $(document).ready(function () {
+      $("#btnMob").click(function () {
+
+        $("#myNavbarMob").slideToggle("slow");
+      });
+    });
+  </script>
+
+  <!-- End of nav for mobile -->
+
+
+
+
+
+
+
+
+
+  <div class="container" style="margin-top: 70px;">
+    <div class="row">
+      <div class="col-lg-12">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid" id="recent">
+    <div class="row">
+
+      <div class="col-lg-2">
+        <a href="javascript:void(0)" title="latest commitee">
+          <!--<img src="leftcircle.png" class="img img-responsive" style="height: 50px; margin-top: 20px;" id="imgtop">-->
+        </a>
+      </div>
+
+      <div class="col-lg-2 " style="background-color: #d3d3d3; margin-top: 50px;">
+        <h3 id="prcomtext" class="text-center" style="color: #0084AD; font-family: elkwood;">PRESENT<br>COMMITTEE</h3>
+      </div>
+
+      <div class="col-lg-2 " style="background-color: #e8e8e8; margin-top: 50px;">
+        <h3 id="lastcomtext" class="text-center" style="font-family: elkwood;">COMMITTEE<br>2017-2018</h3>
+      </div>
+
+      <div class="col-lg-2 " style="background-color: #d3d3d3; margin-top: 50px;">
+        <h3 id="slastcomtext" class="text-center" style="font-family: elkwood;">COMMITTEE<br>2016-2017</h3>
+      </div>
+
+      <div class="col-lg-2" style="background-color: #e8e8e8; margin-top: 50px;">
+        <h3 id="tlastcomtext" class="text-center" style="font-family: elkwood;">COMMITTEE<br>2015-2016</h3>
+      </div>
+
+
+      <div class="col-lg-2 " id="bottom">
+        <a href="javascript:void(0)" title="last commitee">
+          <!--<img src="rightcircle.png" class="img img-responsive" style="height: 50px; margin-top: 20px;" id="imgbot">-->
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="display:none;">
+    <div class="row">
+      <div class="col-lg-12 col-xs-12">
+        <button class="btn btn-danger" id="archivebtn">ARCHIVES</button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-xs-8" id="backbtn">
+
+        <button class="btn btn-success">BACK TO RECENT</button>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <div id="hidemeinmobile">
+
+
+
+
+
+
+    <div class="container text-center" id="prescom">
+      <div class="row">
+
+
+
+
+
+
+
+
+
+
+        <div class="container" style="margin-top: 20px;">
+          <div class="row">
+
+            <!-- spacve for vector-->
+            <img src="All images/counsellor.png" class="img img-responsive img-circle"
+              style="height: 80px; width: 80px; float: left; margin-top: 15px;margin-right: 20px;">
+            <h1 class="" style="float: left; margin-bottom: 25px; font-size: 500%; font-family: elkwood">FACULTY</h1>
+
+          </div>
+        </div>
+        <!--
+<div class="container" style="margin-top: 25px; margin-left: 10px;">
+  <div class="row">
+<img src="committee images/rajeev arya.jpg" class="img img-responsive" style="border: 2px solid white; float:right; border-radius: 50%; padding: 5px; margin: 5px; margin-top: 15px; width:200px; height: 210px;">
+         
+      <h4 style="font-weight: bold;font-size: 200%;">DR. RAJEEV ARYA</h4>
+      <h5 style="font-weight: bold;font-size: 200%;">Email:rajeev.arya@nitp.ac.in</h5>
+       <p style="font-size: 150%; text-align: justify;">Dr. Rajeev Arya is an Assistant Professor of Electronics and Communication Engineering Department at NIT Patna. He had completed his B.E  from Government Engineering College Ujjain ,M.Tech from Indian Institute of Technology (ISM) Dhanbad and PH.D from Indian Institute of Technology Roorkee. Currently, he is the professor In-charge of IEEE Student Branch, NIT Patna.</p>
+
+  </div>
+</div>
+-->
+        <div class="container" style="margin-top: 5px;">
+          <div class="row" style="margin:8px;">
+            <h4 style="font-weight: bold; margin-left: 0px; float: left;" id="styleme">DR. SUBODH SRIVASTAVA</h4>
+
+            <div>
+              <p style="font-size: 17px; text-align: justify; width:850px; float: left; margin-top: 0px;">Dr. Subodh
+                Srivastava is an Assistant Professor of Electronics and Communication Engineering Department at NIT
+                Patna. He had completed his B.E in Electronics and Communication Engineering from (UNS Institute of
+                Engineering and Technology ) VBSPU ,Gov. State University in the year 2007 and M.E with specialization
+                in “Image Processing, Pattern Classification” from IIT BHU Varanasi in the year 2012. His interest
+                include :- Image Processing, Pattern recognition /Pattern Classification, Machine Learning, Medical
+                Image Processing, Image Analysis and Computer Vision, Computer Programming, Microprocessor and Micro
+                Controller, Multimedia Communication. Currently, he is the professor In-charge of IEEE Student Branch,
+                NIT Patna.</p>
+              <img src="committee images/profsub2.jpeg" class="img img-responsive"
+                style="float: right; margin-top: -50px; width: 200px;">
+
+
+
+
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+
+            <!-- spacve for vector-->
+            <img src="All images/commitee.png" class="img img-responsive img-circle"
+              style="height: 80px; width: 80px; float: left; margin-top: 15px; margin-right: 10px;">
+
+            <h1 class=""
+              style="float: left; margin-bottom: 0px; font-size: 500%; margin-left: 10px; font-family: elkwood;">STUDENT
+              COMMITTEE</h1>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/chairman.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Aditya Kumar Singh</h4>
+                <h4>Call: +91 9454809340</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail: atul001.2011@gmail.com</h4>
+              </div>
+              <div class="s-link">
+                <a href="https://www.facebook.com/aadit2051"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://www.instagram.com/aa.di.t.ya/"><i class="fa fa-instagram"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="mailto:atul001.2011@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/vice.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Rohit Singh</h4>
+                <h4>Call: +91 9554642260</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail: rhttaj@gmail.com</h4>
+              </div>
+              <div class="s-link">
+                <!--<a href="https://www.facebook.com/vsr2308"><i class="fa fa-facebook" style="font-size:24px;color: #023D4F"></i></a>
+                                        <a href="https://www.instagram.com/vsr2786/"><i class="fa fa-instagram" style="font-size:24px;color: #023D4F"></i></a>-->
+                <a href="mailto:rhttaj@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/secretary.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;"> Vikesh Kumar</h4>
+                <h4>Call: +91 7903664850</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail: vikesh1502037@nitp.ac.in</h4>
+              </div>
+              <div class="s-link">
+                <a href="https://www.facebook.com/vikesh.kumar.988"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://twitter.com/VikeshK31390062"><i class="fa fa-twitter"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://www.instagram.com/7vikesh_gamechanger/"><i class="fa fa-instagram"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="mailto:vikesh1502037@nitp.ac.in"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/treasurer.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Yash Jeet Singh</h4>
+                <h4>Call: +91 8765414265</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail: yash231219@gmail.com</h4>
+
+              </div>
+              <div class="s-link">
+                <a href="https://www.facebook.com/ASH1JEET"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://twitter.com/Jeet_ash?s=09"><i class="fa fa-twitter"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://www.instagram.com/ash_jeet/"><i class="fa fa-instagram"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="mailto:Yash231219@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/pnp2.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Rajiv Ranjan</h4>
+                <h4>Call: +91 7979776046</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>lectrical Engineering</h4>
+                <h4>E-Mail: rajiv.9211.rr@gmail.com</h4>
+              </div>
+              <div class="s-link">
+                <a href="https://www.facebook.com/rajiv.ranjan.792197"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://www.instagram.com/rajiv_49/"><i class="fa fa-instagram"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="mailto:9211.rr@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/pnp1.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Surbhi Saxena</h4>
+                <h4>Call: +91 6395553480</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail: surbhisaxena002@gmail.com</h4>
+              </div>
+              <div class="s-link">
+                <a href="https://www.facebook.com/surbhi.saxena.9081"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://www.instagram.com/surbhi3669/"><i class="fa fa-instagram"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="mailto:surbhisaxena002@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/event2.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Sirtaj Ahmad</h4>
+                <h4>Call: +91 8318860636</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail: 7sartaj1995@gmail.com</h4>
+              </div>
+              <div class="s-link">
+                <a href="https://m.facebook.com/sirtaj.ahmad.944"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <!--<a href=""><i class="fa fa-instagram" style="font-size:24px;color: #023D4F"></i></a>-->
+                <a href="mailto:7sartaj1995@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/event1.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Kamlesh Ratnam</h4>
+                <h4>Call: +91 8104573091</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail: kamlesh.1502043@nitp.ac.in</h4>
+                <h4>Roll no: 1502043</h4>
+              </div>
+              <div class="s-link">
+                <a href="https://www.facebook.com/profile.php?id=100007804847818"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://twitter.com/ratnamkamlesh"><i class="fa fa-twitter"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://www.instagram.com/kamleshratnam/"><i class="fa fa-instagram"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="mailto:kamleshratnam1997@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/project1.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Pratyush Gauri</h4>
+                <h4>Call: +91 9162213526</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail:</h4>
+                <h5>pratyushgauri30696@gmail.com</h5>
+              </div>
+              <div class="s-link">
+                <a href="https://www.facebook.com/pratyush.gauri"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <!--<a href="https://www.instagram.com/vsr2786/"><i class="fa fa-instagram" style="font-size:24px;color: #023D4F"></i></a>-->
+                <a href="pratyushgauri30696@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/project2.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Mayank Kumar</h4>
+                <h4>Call: +91 9546389436</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail: mk2091434@gmail.com</h4>
+              </div>
+              <div class="s-link">
+                <a href="https://m.facebook.com/mayank.kumar78"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://www.instagram.com/anku_002"><i class="fa fa-instagram"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="mailto:mk2091434@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/web1.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Devendra Prasad</h4>
+                <h4>Call: +91 9135302787</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electrical Engineering</h4>
+                <h4>E-Mail: iamdp17@gmail.com</h4>
+              </div>
+              <div class="s-link">
+                <a href="https://www.facebook.com/profile.php?id=100002064415686"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="https://twitter.com/dpDevendra_"><i class="fa fa-twitter"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <a href="mailto:iamdp17@gmail.com"><i class="fa fa-envelope"
+                    style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-3 col-sm-3 col-xs-12" style="margin-top: 50px;">
+          <div class="team-member">
+            <div class="team-img">
+              <img src="All images/web2.jpg" alt="team member" class="img-responsive" style=" border-radius: 0%;">
+            </div>
+            <div class="team-hover">
+              <div class="desk">
+                <h4 style="font-weight: bold;">Kunal Kumar</h4>
+                <h4>Call: +91 9546836676</h4>
+                <h4>B.Tech (2k15 Batch)</h4>
+                <h4>Electronics and Communication Engineering</h4>
+                <h4>E-Mail: shoryakk816@gmail.com</h4>
+              </div>
+              <div class="s-link">
+                <a href="https://www.facebook.com/kunal.kishor.739"><i class="fa fa-facebook"
+                    style="font-size:24px;color: #023D4F"></i></a>
+                <!--<a href="https://www.instagram.com/vsr2786/"><i class="fa fa-instagram" style="font-size:24px;color: #023D4F"></i></a>-->
+                <a href="shoryakk816@gmail.com"><i class="fa fa-envelope" style="font-size:24px;color: #023D4F"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+
+    <!---------------------   ***************   ------------------
+	------------------- ******************* ------------------
+	// second last community   -->
+
+
+
+    <div class="container text-center hidemeinmobile" id="lastcom">
+      <div class="row">
+
+
+
+
+
+        <div class="container" style="margin-top: 20px;">
+          <div class="row">
+
+            <!-- spacve for vector-->
+            <img src="All images/counsellor.png" class="img img-responsive img-circle"
+              style="height: 80px; width: 80px; float: left; margin-top: 15px;margin-right: 10px;">
+            <h1 class="" style="float: left;font-size:500%;margin-bottom: 25px;margin-left: 8px; font-family: elkwood">
+              FACULTY</h1>
+
+          </div>
+        </div>
+
+        <div class="container" style="margin-top: 25px;">
+          <div class="row" style="margin:8px;">
+
+
+
+
+            <h4 style="font-weight: bold;font-size: 200%; float: left;">PROF. KUMAR ABHISHEK</h4>
+            <div>
+              <img src="committee images/kumar.abhisekh.jpg" class="img img-responsive"
+                style=" float:right; padding: 5px; margin: 5px; width: 200px; height: 210px;">
+              <p style="font-size: 17px; width: 850px;float: left; text-align: justify;">Prof Kumar Abhishek is an
+                Assistant Professor of Computer Science and Engineering Department of NIT Patna. He had completed his
+                B.E in Computer Science and Engineering from Biju Pattanaik University of Technology (BPUT) in the year
+                2005 and his M.E in Computer and Communication from Anna University in the year 2008. His research
+                interest include Semantic Web , Artificial Neural Network and Semantic Sensor Network.</p>
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+
+        <hr>
+
+        <div class="container">
+          <div class="row">
+
+
+            <!-- spacve for vector-->
+            <img src="All images/commitee.png" class="img img-responsive img-circle"
+              style="height: 80px; width: 80px; float: left; margin-top: 15px; margin-right: 10px;">
+            <h1 class=""
+              style="float: left; margin-bottom: 25px;font-size: 500%;margin-left: 10px; font-family: elkwood;">STUDENT
+              COMMITTEE</h1>
+
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/priyam.jpg" class="img img-responsive img-thumbnail" id="resp">
+                  <div class="text-center">
+                    <h2>CHAIR PERSON</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Priyam Upadhyay
+                  </h4>
+                  <h4>Call: +91 7903856123</h4>
+                  <h4>B.Tech (2k14 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:iampriyam1@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/aviral.jpg" class="img img-responsive img-thumbnail" id="resp">
+                  <div class="text-center">
+                    <h2>SECRETARY</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Aviral Singh</h4>
+                  <h4>Call: +91 8299013822</h4>
+                  <h4>B.Tech (2k14 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:aviral.avi.singh@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/gaurav.jpg" class="img img-responsive img-thumbnail" id="resp">
+                  <div class="text-center">
+                    <h2>TREASURER</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Gaurav Kumar Agrawal</h4>
+                  <h4>Call: +91 8102771313</h4>
+                  <h4>B.Tech (2k14 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:gka.nitp@gmail.com </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/faiz.jpg" class="img img-responsive img-thumbnail" id="resp">
+                  <div class="text-center">
+                    <h2>P&P CO-ORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Faiz Kumar</h4>
+                  <h4>Call: +91 8210810765</h4>
+                  <h4>B.Tech (2k14 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail: faizkumar1@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/heday.jpg" class="img img-responsive img-thumbnail" id="resp">
+                  <div class="text-center">
+                    <h2>EVENT'S CO-ORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Md. Hedayatullah</h4>
+                  <h4>Call: +91 7739032313</h4>
+                  <h4>B.Tech (2k14 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:md.hedayatullah9@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/brij.jpg" class="img img-responsive img-thumbnail" id="resp">
+                  <div class="text-center">
+                    <h2>EVENT'S CO-ORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Brijesh Yadav</h4>
+                  <h4>Call: +91 9060533110</h4>
+                  <h4>B.Tech (2k14 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:brijeshnitp@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/raj.jpg" class="img img-responsive img-thumbnail" id="resp">
+                  <div class="text-center">
+                    <h2>PROJECT'S CO-ORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Raj Verma</h4>
+                  <h4>Call: +91 8709750441</h4>
+                  <h4>B.Tech (2k14 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:rajverma.nitp27@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/ravina.jpg" class="img img-responsive img-thumbnail" id="resp">
+                  <div class="text-center">
+                    <h2>WEB HEAD</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;"> Ravina</h4>
+                  <h4>Call: +91 7033048227</h4>
+                  <h4>B.Tech (2k15 Batch)</h4>
+                  <h4>Computer Science & Engineering</h4>
+                  <h4>E-Mail: ravina01997@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!---------------------   ***************   ------------------
+	------------------- ******************* ------------------
+	// third last community   -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container text-center" id="slastcom">
+      <div class="row">
+
+
+
+
+
+        <div class="container" style="margin-top: 20px;">
+          <div class="row">
+
+            <!-- spacve for vector-->
+            <img src="All images/counsellor.png" class="img img-responsive img-circle"
+              style="height: 80px; width: 80px; float: left; margin-top: 15px;margin-right: 10px;">
+            <h1 class="" style="float: left;font-size:500%;margin-bottom: 25px;margin-left: 10px; font-family: elkwood">
+              FACULTY</h1>
+
+          </div>
+        </div>
+        <div class="container" style="margin-top: 25px;">
+          <div class="row" style="margin:8px;">
+
+
+            <h4 style="font-weight: bold;font-size: 200%; float: left;">PROF. KUMAR ABHISHEK</h4>
+            <div>
+              <img src="committee images/kumar.abhisekh.jpg" class="img img-responsive"
+                style=" float:right; padding: 5px; margin: 5px; width: 200px; height: 210px;">
+              <p style="font-size: 17px; width: 850px;float: left; text-align: justify;">Prof Kumar Abhishek is an
+                Assistant Professor of Computer Science and Engineering Department of NIT Patna. He had completed his
+                B.E in Computer Science and Engineering from Biju Pattanaik University of Technology (BPUT) in the year
+                2005 and his M.E in Computer and Communication from Anna University in the year 2008. His research
+                interest include Semantic Web , Artificial Neural Network and Semantic Sensor Network.</p>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+        <hr>
+        <div class="container">
+          <div class="row">
+            <!-- spacve for vector-->
+            <img src="All images/commitee.png" class="img img-responsive img-circle"
+              style="height: 80px; width:80px; float: left; margin-top: 15px;">
+            <h1 class="" style="float: left; margin-bottom: 25px; font-size: 500%; font-family: elkwood">STUDENT
+              COMMITTEE</h1>
+
+          </div>
+        </div>
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/jigyasu.jpg" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>CHAIR PERSON</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Jigyansu Agarwal</h4>
+                  <h4>Call: +91 9557744340</h4>
+                  <h4>B.Tech (2k13 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:jigyasuagarwal@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="All images/male.png" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>VICE CHAIRPERSON</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Chaman Singh</h4>
+                  <h4>Call: +91 8083650538</h4>
+                  <h4>B.Tech (2k13 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="Committee images/arun.jpg" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>SECRETARY</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Arun Kumar</h4>
+                  <h4>Call: +91 88772 29320</h4>
+                  <h4>B.Tech (2k13 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail:itsmearunkumark@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="All images/male.png" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>JOINT SECRETARY</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Kumar Piyush</h4>
+                  <h4>Call: +91 94306 09681</h4>
+                  <h4>B.Tech (2k14 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/amratanshgupta.jpg" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>JOINT SECRETARY</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;"> Amratansh Gupta</h4>
+                  <h4>Call: +91 84070 58324</h4>
+                  <h4>B.Tech (2k14 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:amratanshgupta@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/shreyansh.jpg" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>TREASURER</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Shreyansh Kumar</h4>
+                  <h4>Call: +91 9771907175</h4>
+                  <h4>B.Tech (2k13 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:shreyansh20111995@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/vivek.jpg" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>P&P CO-ORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;"> Vivek Kumar Singh</h4>
+                  <h4>Call: +91 7479736735</h4>
+                  <h4>B.Tech (2k13 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail: abhinay2k16@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/sdubey.jpg" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>EVENT'S CO-ORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Saurabh Dubey</h4>
+                  <h4>Call: +91 94722 73896</h4>
+                  <h4>B.Tech (2k13 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:saurabh6197@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="All images/male.png" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>EVENT'S CO-ORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Yash Saxena</h4>
+                  <h4>Call: +91 94065 80764</h4>
+                  <h4>B.Tech (2k13 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail:</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="All images/male.png" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>PROJECT'S CO-ORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Ankesh Pandey</h4>
+                  + <h4>Call: +91 89699 93031</h4>
+                  <h4>B.Tech (2k13 Batch)</h4>
+                  <h4>Electrical Engineering</h4>
+                  <h4>E-Mail:</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/rkc.jpg" class="img img-responsive img-thumbnail" id="resp"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>WEB HEAD</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Rahul Choudhary</h4>
+                  <h4>Call: +91 9472625030</h4>
+                  <h4>B.Tech (2k13 Batch)</h4>
+                  <h4>Computer Science & Engineering</h4>
+                  <h4>E-Mail: rkchy03@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---------------------   ***************   ------------------
+	------------------- ******************* ------------------
+	// fourth last community   -->
+
+
+
+    <div class="container text-center" id="tlastcom">
+      <div class="row">
+
+
+
+
+
+
+        <div class="container" style="margin-top: 20px;">
+          <div class="row" ">
+           
+  <!-- spacve for vector-->
+  <img src=" All images/counsellor.png" class="img img-responsive img-circle"
+            style="height: 80px; width: 80px; float: left; margin-top: 15px;margin-right: 10px;">
+            <h1 class="" style="float: left;font-size:500%;margin-bottom: 25px;margin-left: 10px; font-family: elkwood">
+              FACULTY</h1>
+
+          </div>
+        </div>
+        <div class="container" style="margin-top: 25px;">
+          <div class="row" style="margin:8px;">
+
+
+            <h4 style="font-weight: bold;font-size: 200%; float: left;">PROF. KUMAR ABHISHEK</h4>
+            <div>
+              <img src="committee images/kumar.abhisekh.jpg" class="img img-responsive"
+                style=" float:right; padding: 5px; margin: 5px; width: 200px; height: 210px;">
+              <p style="font-size: 17px; width: 850px;float: left; text-align: justify;">Prof Kumar Abhishek is an
+                Assistant Professor of Computer Science and Engineering Department of NIT Patna. He had completed his
+                B.E in Computer Science and Engineering from Biju Pattanaik University of Technology (BPUT) in the year
+                2005 and his M.E in Computer and Communication from Anna University in the year 2008. His research
+                interest include Semantic Web , Artificial Neural Network and Semantic Sensor Network.</p>
+            </div>
+
+
+
+
+
+
+          </div>
+        </div>
+
+        <hr>
+        <div class="container">
+          <div class="row">
+            <!-- spacve for vector-->
+            <img src="All images/commitee.png" class="img img-responsive img-circle"
+              style="height: 80px; width: 80px; float: left; margin-top: 15px;">
+            <h1 class="" style="float: left; margin-bottom: 25px; font-size: 500%; font-family: elkwood">STUDENT
+              COMMITTEE</h1>
+
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/vishal_sir.jpg" class="img img-responsive img-thumbnail"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>CHAIR PERSON</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">VISHAL ANAND</h4>
+                  <h4>Call: +91 8292124334</h4>
+                  <h4>B.Tech (2k12 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail:<br>vishalanand.ece.nitp@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/narayan.jpg" class="img img-responsive img-thumbnail"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>VICE CHAIR PERSON</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Narayanam Moukthik</h4>
+                  <h4>Call: +91 7544869550</h4>
+                  <h4>B.Tech (2k12 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail:<br>narayanam.moukthik@gmail.com</h4>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/rajeshsir.jpg" class="img img-responsive img-thumbnail"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>SECRETARY</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Rajesh Roshan</h4>
+                  <h4>Call: +91 8102460464</h4>
+                  <h4>B.Tech (2k12 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail:<br>rajesh.ece.nitp@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/agam_sir.jpg" class="img img-responsive img-thumbnail"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>TREASURER</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Agam Kumar Gupta</h4>
+                  <h4>Call: +91 9452303595</h4>
+                  <h4>B.Tech (2k12 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail:<br>agam786170894@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="All images/male.png" class="img img-responsive img-thumbnail"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>P&P COORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Nishant Gaurav</h4>
+                  <h4>Call: +91</h4>
+                  <h4>B.Tech (2k12 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail:</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="committee images/uday_sir.jpg" class="img img-responsive img-thumbnail"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>EVENT'S CO-ORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">UDAY KUMAR KASHAE</h4>
+                  <h4>Call: +91 7856009158</h4>
+                  <h4>B.Tech (2k12 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail:udaykumar070793@gmail.com</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="col-sm-3 check" style="margin-top: 50px;">
+          <div class="flip">
+            <div class="card">
+              <div class="face front">
+                <div class="inner">
+                  <img src="All images/male.png" class="img img-responsive img-thumbnail"
+                    style="width: 290px; height: 250px;">
+                  <div class="text-center">
+                    <h2>PROJECTS CO-COORDINATOR</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="face back">
+                <div class="inner text-center">
+                  <div> <i class="fa fa-facebook-official" style="font-size:36px"></i>
+                    <i class="fa fa-github" style="font-size:36px"></i>
+
+                    <i class="fa fa-google-plus-official" style="font-size:36px"></i>
+                  </div>
+                  <h4 style="font-weight: bold;">Kanurri Vijay</h4>
+                  <h4>Call: +91</h4>
+                  <h4>B.Tech (2k12 Batch)</h4>
+                  <h4>Electronics & Communication Engineering</h4>
+                  <h4>E-Mail:</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <script type="text/javascript">
+    $('.flip').hover(function () {
+      $(this).find('.card').toggleClass('flipped');
+
+    });
+  </script>
+
+
+  <!-- Student commitee in mobile view -->
+
+  <style type="text/css">
+    .card {
+      margin: auto;
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 361px) {
+      .card-profile {
+        background-color: #e6e5e1;
+      }
+
+      .card-img-top {
+        width: 100%;
+      }
+
+      .card-img-profile {
+        height: 170px;
+        width: 170px;
+      }
+
+    }
+
+    @media screen and (max-width: 360px) {
+      .card-profile {
+        width: 330px;
+        margin-right: 25px;
+        margin-bottom: 30px;
+        background-color: #e6e5e1;
+        border-radius: 0;
+        border: 0;
+        height: 440px;
+        box-shadow: 1em 1em 2em rgba(0, 0, 0, 0);
+      }
+
+      #subGalaxy {
+        height: 800px;
+      }
+
+      #subGalaxy2 {
+        height: 600px;
+      }
+
+      #subGalaxy3 {
+        height: 600px;
+      }
+
+      #subGalaxy4 {
+        height: 600px;
+      }
+
+
+      .card-img-profile {
+        height: 170px;
+        width: 170px;
+      }
+
+      .card-img-top {
+        width: 330px;
+      }
+
+    }
+
+    .card-profile .card-img-top {
+      border-radius: 0;
+    }
+
+    .card-profile .card-img-profile {
+      max-width: 100%;
+      border-radius: 50%;
+      margin-top: -95px;
+      margin-bottom: 35px;
+      border: 5px solid #e6e5e1;
+    }
+
+    .card-profile .card-title {
+      margin-bottom: 50px;
+    }
+
+    .card-profile .card-title small {
+      display: block;
+      font-size: .6em;
+      margin-top: .2em;
+    }
+
+    .card-profile .card-links {
+      padding-top: 10px;
+      padding-bottom: 20px;
+    }
+
+    .card-profile .card-links .fa {
+      margin: 0 1em;
+      font-size: 1.6em;
+    }
+
+    .card-profile .card-links .fa:focus,
+    .card-profile .card-links .fa:hover {
+      text-decoration: none;
+    }
+
+    .card-profile .card-links .fa.fa-phone {
+      color: #34495E;
+
+    }
+
+    .card-profile .card-links .fa.fa-instagram {
+      color: tomato;
+
+    }
+
+    .card-profile .card-links .fa.fa-twitter {
+      color: #68aade;
+    }
+
+    .card-profile .card-links .fa.fa-facebook {
+      color: #3b5999;
+    }
+
+    .card-profile .card-links .fa.fa-envelope {
+      color: #16A085;
+    }
+
+
+    #lastcommob {
+      display: none;
+    }
+
+    #slastcommob {
+      display: none;
+    }
+
+    #tlastcommob {
+      display: none;
+    }
+
+    #prcomtextmob,
+    #lastcomtextmob,
+    #slastcomtextmob,
+    #tlastcomtextmob {
+      cursor: pointer;
+    }
+  </style>
+
+
+  <div id="showinmobile">
+
+
+
+
+    <div class="container-fluid" id="recentmob">
+      <div class="row" style="margin-top: 10px;">
+
+
+        <div class="col-lg-2 "
+          style="background-color: #d3d3d3; height:100%; width: 300px; margin: auto; border-radius: 5px;">
+          <h3 id="prcomtextmob" class="text-center"
+            style="padding-top: 10px; color: #0084AD;font-size: 150%; font-family: elkwood">PRESENT COMMITTEE</h3>
+        </div>
+
+        <div class="col-lg-2 "
+          style="background-color: #d3d3d3; height:100%; width: 300px; margin: auto; border-radius: 5px;">
+          <h3 id="lastcomtextmob" class="text-center" style=" padding-top: 10px;font-size: 150%;font-family: elkwood">
+            COMMITTEE(2017-2018)</h3>
+        </div>
+
+        <div class="col-lg-2 "
+          style="background-color: #d3d3d3; height:100%; width: 300px; margin: auto; border-radius: 5px;">
+          <h3 id="slastcomtextmob" class="text-center" style="padding-top: 10px;font-size: 150%;font-family: elkwood">
+            COMMITTEE(2016-2017)</h3>
+        </div>
+
+        <div class="col-lg-2"
+          style="background-color: #d3d3d3; height:100%; width: 300px; margin: auto; border-radius: 5px;">
+          <h3 id="tlastcomtextmob" class="text-center" style="padding-top: 10px;font-size: 150%;font-family: elkwood">
+            COMMITTEE(2015-2016)</h3>
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="prescommob">
+
+      <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="All images/counsellor.png" class="img img-responsive img-circle"
+              style="height: 15%; width: 15%; float: left; margin-top: 20px;margin-right: 10px;">
+          </div>
+
+          <div class="col-sm-4">
+            <h1 style="font-family: elkwood; font-size: 400%;">FACULTY</h1>
+          </div>
+
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12" style="">
+
+            <div class='card card-profile text-center' id="subGalaxy" style="">
+              <img alt='' class='card-img-top' src='committee images/cover.jpg' style="">
+              <div class='card-block' style="">
+                <img alt='' class='card-img-profile ' src='All images/commiteemob/profsub2.jpeg'>
+                <h4 style="font-size: 150%; font-weight: bold;">DR. SUBODH SRIVASTAVA</h4>
+                <p style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px; font-size: 120%;">Dr. Subodh
+                  Srivastava is an Assistant Professor of Electronics and Communication Engineering Department at NIT
+                  Patna. He had completed his B.E in Electronics and Communication Engineering from (UNS Institute of
+                  Engineering and Technology ) VBSPU ,Gov. State University in the year 2007 and M.E with specialization
+                  in “Image Processing, Pattern Classification” from IIT BHU Varanasi in the year 2012. His interest
+                  include :- Image Processing, Pattern recognition /Pattern Classification, Machine Learning, Medical
+                  Image Processing, Image Analysis and Computer Vision, Computer Programming, Microprocessor and Micro
+                  Controller, Multimedia Communication. Currently, he is the professor In-charge of IEEE Student Branch,
+                  NIT Patna.</p>
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- student commitee -->
+
+      <div class="container" style="margin-bottom: 20px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="All images/commitee.png" class="img img-responsive img-circle"
+              style="height: 15%; width: 15%; float: left; margin-top: 20px;margin-right: 10px;">
+          </div>
+
+          <div class="col-sm-4">
+            <h1 style="font-family: elkwood; font-size: 400%;">COMMITTEE</h1>
+          </div>
+
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/chairman.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold;">CHAIRMAN</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">ADITYA SINGH</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 9454809340</h4>
+
+
+
+                <div class='card-links'>
+
+                  <a class='fa fa-instagram' href='https://www.instagram.com/aa.di.t.ya/'></a>
+                  <a class='fa fa-facebook' href='https://www.facebook.com/aadit2051'></a>
+                  <a class='fa fa-envelope' href='mailto:atul001.2011@gmail.com'></a>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/vice.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold;">VICE-CHAIRMAN</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">ROHIT SINGH</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 9554642260</h4>
+
+
+
+                <div class='card-links'>
+
+                  <a class='fa fa-envelope' href='mailto:rhttaj@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/secretary.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold;">SECRETARY</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">VIKESH KUMAR</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 7903664850</h4>
+
+
+
+                <div class='card-links'>
+
+                  <a class='fa fa-instagram' href='https://www.instagram.com/7vikesh_gamechanger/'></a>
+                  <a class='fa fa-twitter' href='https://twitter.com/VikeshK31390062'></a>
+                  <a class='fa fa-facebook' href='https://www.facebook.com/vikesh.kumar.988'></a>
+                  <a class='fa fa-envelope' href='mailto:vikesh1502037@nitp.ac.in'></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/treasurer.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold;">TREASURER</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">YASHJEET SINGH</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 8765414265</h4>
+
+
+
+                <div class='card-links'>
+
+                  <a class='fa fa-instagram' href='https://www.instagram.com/ash_jeet/'></a>
+                  <a class='fa fa-twitter' href='https://twitter.com/Jeet_ash?s=09'></a>
+                  <a class='fa fa-facebook' href='https://www.facebook.com/ASH1JEET'></a>
+                  <a class='fa fa-envelope' href='mailto:Yash231219@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/pnp2.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold;">P & P COORDINATOR</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">RAJIV RANJAN</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 7979776046</h4>
+
+
+
+                <div class='card-links'>
+
+                  <a class='fa fa-instagram' href='https://www.instagram.com/rajiv_49/'></a>
+
+                  <a class='fa fa-facebook' href='https://www.facebook.com/rajiv.ranjan.792197'></a>
+                  <a class='fa fa-envelope' href='mailto:9211.rr@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/pnp1.png'>
+                <h4 style="font-size: 120%; font-weight: bold;">P & P COORDINATOR</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">SURBHI SAXENA</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 6395553480</h4>
+
+
+
+                <div class='card-links'>
+
+                  <a class='fa fa-instagram' href='https://www.instagram.com/surbhi3669/'></a>
+
+                  <a class='fa fa-facebook' href='https://www.facebook.com/surbhi.saxena.9081'></a>
+                  <a class='fa fa-envelope' href='mailto:surbhisaxena002@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/event2.jpeg'>
+                <h4 style="font-size: 120%; font-weight: bold;">EVENT COORDINATOR</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">SIRTAJ AHMED</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 8318860636</h4>
+
+
+
+                <div class='card-links'>
+
+
+                  <a class='fa fa-facebook' href='https://m.facebook.com/sirtaj.ahmad.944'></a>
+                  <a class='fa fa-envelope' href='mailto:7sartaj1995@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/event1.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold;">EVENT COORDINATOR</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">KAMLESH RATNAM</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 8104573091</h4>
+
+
+                <div class='card-links'>
+
+                  <a class='fa fa-instagram' href='https://www.instagram.com/kamleshratnam/'></a>
+                  <a class='fa fa-twitter' href='https://twitter.com/ratnamkamlesh'></a>
+                  <a class='fa fa-facebook'
+                    href='https://www.facebook.com/profile.php?id=100007804847818"><i class="fa fa-facebook'></a>
+                  <a class='fa fa-envelope' href='mailto:kamleshratnam1997@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/project1.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold;">PROJECT COORDINATOR</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">PRATYUSH GAURI</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 9162213526</h4>
+
+
+
+                <div class='card-links'>
+
+
+                  <a class='fa fa-facebook' href='https://www.facebook.com/pratyush.gauri'></a>
+                  <a class='fa fa-envelope' href='pratyushgauri30696@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/project2.jpg'>
+                <h4 style="font-size: 150%; font-weight: bold;">PROJECT COORDINATOR</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">MAYANK KUMAR</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 9546389436</h4>
+
+
+                <div class='card-links'>
+
+                  <a class='fa fa-instagram' href='https://www.instagram.com/anku_002'></a>
+
+                  <a class='fa fa-facebook' href='https://m.facebook.com/mayank.kumar78"><i class="fa fa-facebook'></a>
+                  <a class='fa fa-envelope' href='mailto:mk2091434@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/web1.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold;">WEB HEAD</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">DEVENDRA PRASAD</h4>
+                <h4>B.TECH EE - 2K15 BATCH</h4>
+                <h4>Call: +91 9135302787</h4>
+
+
+
+                <div class='card-links'>
+
+
+                  <a class='fa fa-twitter' href='https://twitter.com/dpDevendra_'></a>
+                  <a class='fa fa-facebook'
+                    href='https://www.facebook.com/profile.php?id=100002064415686"><i class="fa fa-facebook'></a>
+                  <a class='fa fa-envelope' href='mailto:iamdp17@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='All images/commiteemob/web2.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold;">WEB HEAD</h4>
+                <h4 style="font-size: 150%; font-weight: bold;">KUNAL KUMAR</h4>
+                <h4>B.TECH ECE - 2K15 BATCH</h4>
+                <h4>Call: +91 9546836676</h4>
+
+
+
+                <div class='card-links'>
+
+
+                  <a class='fa fa-facebook' href='https://www.facebook.com/kunal.kishor.739'></a>
+                  <a class='fa fa-envelope' href='shoryakk816@gmail.com'></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- last year comm in mobile -->
+
+
+    <div id="lastcommob">
+
+      <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="All images/counsellor.png" class="img img-responsive img-circle"
+              style="height: 15%; width: 15%; float: left; margin-top: 20px;margin-right: 10px;">
+          </div>
+
+          <div class="col-sm-4">
+            <h1 style="font-family: elkwood; font-size: 400%;">FACULTY</h1>
+          </div>
+
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center' id="subGalaxy2">
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile ' src='committee images/kumar.abhisekh.jpg'>
+                <h4 style="font-size: 150%; font-weight: bold;">PROF. KUMAR ABHISHEK</h4>
+                <p style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px; font-size: 120%;">Prof Kumar
+                  Abhishek is an Assistant Professor of Computer Science and Engineering Department of NIT Patna. He had
+                  completed his B.E in Computer Science and Engineering from Biju Pattanaik University of Technology
+                  (BPUT) in the year 2005 and his M.E in Computer and Communication from Anna University in the year
+                  2008. His research interest include Semantic Web , Artificial Neural Network and Semantic Sensor
+                  Network.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- student commitee -->
+
+      <div class="container" style="margin-bottom: 20px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="All images/commitee.png" class="img img-responsive img-circle"
+              style="height: 15%; width: 15%; float: left; margin-top: 20px;margin-right: 10px;">
+          </div>
+
+          <div class="col-sm-4">
+            <h1 style="font-family: elkwood; font-size: 400%;">COMMITTEE</h1>
+          </div>
+
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/priyam.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">CHAIRMAN</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">PRIYAM UPADHYAY</h4>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+
+                <img alt='' class='card-img-profile' src='committee images/aviral.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">SECRETARY</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">AVIRAL SINGH</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+
+                <img alt='' class='card-img-profile' src='committee images/gaurav.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">TREASURER</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">GAURAV KUMAR AGARWAL</h4>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+
+                <img alt='' class='card-img-profile' src='committee images/faiz.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">P & P COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">FAIZ KUMAR</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/heday.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">EVENT COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">MD. HEDAYATULLAH</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/Brij.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">EVENT COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">BRIJESH YADAV</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/Raj.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">PROJECT COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">RAJ VERMA</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/ravina.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">WEB HEAD</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">RAVINA</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <!-- slastcommob -->
+
+
+
+
+    <div id="slastcommob">
+
+      <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="All images/counsellor.png" class="img img-responsive img-circle"
+              style="height: 15%; width: 15%; float: left; margin-top: 20px;margin-right: 10px;">
+          </div>
+
+          <div class="col-sm-4">
+            <h1 style="font-family: elkwood; font-size: 400%;">FACULTY</h1>
+          </div>
+
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center' id="subGalaxy3">
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile ' src='committee images/kumar.abhisekh.jpg'>
+                <h4 style="font-size: 150%; font-weight: bold;">PROF. KUMAR ABHISHEK</h4>
+                <p style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px; font-size: 120%;">Prof Kumar
+                  Abhishek is an Assistant Professor of Computer Science and Engineering Department of NIT Patna. He had
+                  completed his B.E in Computer Science and Engineering from Biju Pattanaik University of Technology
+                  (BPUT) in the year 2005 and his M.E in Computer and Communication from Anna University in the year
+                  2008. His research interest include Semantic Web , Artificial Neural Network and Semantic Sensor
+                  Network.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- student commitee -->
+
+      <div class="container" style="margin-bottom: 20px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="All images/commitee.png" class="img img-responsive img-circle"
+              style="height: 15%; width: 15%; float: left; margin-top: 20px;margin-right: 10px;">
+          </div>
+
+          <div class="col-sm-4">
+            <h1 style="font-family: elkwood; font-size: 400%;">COMMITTEE</h1>
+          </div>
+
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/jigyasu.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">CHAIRMAN</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">JIGYANSU AGARWAL</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/male.png'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">VICE-CHAIRMAN</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">CHAMAN SINGH</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/arun.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">SECRETARY</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">ARUN KUMAR</h4>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/male.png'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">JOINT SECRETARY</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">KUMAR PIYUSH</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/amratanshgupta.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">JOINT SECRETARY</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">AMRATANSH GUPTA</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/shreyansh.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">TREASURER</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">SHREYANSH KUMAR</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/Vivek.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">P & P COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">VIVEK KUMAR SINGH</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/sdubey.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">EVENT COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">SAURABH DUBEY</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/male.png'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">EVENT COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">YASH SAXENA</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/male.png'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">PROJECT COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">ANKESH PANDEY</h4>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/rkc.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">WEB HEAD</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">RAHUL CHAUDHARY</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!-- tlastcommob -->
+
+
+
+    <div id="tlastcommob">
+
+      <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="All images/counsellor.png" class="img img-responsive img-circle"
+              style="height: 15%; width: 15%; float: left; margin-top: 20px;margin-right: 10px;">
+          </div>
+
+          <div class="col-sm-4">
+            <h1 style="font-family: elkwood; font-size: 400%;">FACULTY</h1>
+          </div>
+
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center' id="subGalaxy4">
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile ' src='committee images/kumar.abhisekh.jpg'>
+                <h4 style="font-size: 150%; font-weight: bold;">PROF. KUMAR ABHISHEK</h4>
+                <p style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px; font-size: 120%;">Prof Kumar
+                  Abhishek is an Assistant Professor of Computer Science and Engineering Department of NIT Patna. He had
+                  completed his B.E in Computer Science and Engineering from Biju Pattanaik University of Technology
+                  (BPUT) in the year 2005 and his M.E in Computer and Communication from Anna University in the year
+                  2008. His research interest include Semantic Web , Artificial Neural Network and Semantic Sensor
+                  Network.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- student commitee -->
+
+      <div class="container" style="margin-bottom: 20px;">
+        <div class="row">
+          <div class="col-sm-4">
+            <img src="All images/commitee.png" class="img img-responsive img-circle"
+              style="height: 15%; width: 15%; float: left; margin-top: 20px;margin-right: 10px;">
+          </div>
+
+          <div class="col-sm-4">
+            <h1 style="font-family: elkwood; font-size: 400%;">COMMITTEE</h1>
+          </div>
+
+          <div class="col-sm-4">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/vishal_sir.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">CHAIRMAN</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">VISHAL ANAND</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/narayan.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">VICE-CHAIRMAN</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">NARAYANAM MOUKTHIK</h4>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/rajeshsir.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">SECRETARY</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">RAJESH ROSHAN</h4>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/agam_sir.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">TREASURER</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">AGAM KUMAR GUPTA</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/male.png'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">P & P COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">NISHANT GAURAV</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/uday_sir.jpg'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">EVENT COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">UDAY KUMAR KASHAE</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="col-sm-4">
+            <div class='card card-profile text-center'>
+              <img alt='' class='card-img-top' src='committee images/cover.jpg'>
+              <div class='card-block'>
+                <img alt='' class='card-img-profile' src='committee images/male.png'>
+                <h4 style="font-size: 120%; font-weight: bold; margin-top: -10px;">PROJECT COORDINATOR</h4>
+                <h4 style="font-size: 170%; font-weight: bold; padding-bottom: 20px;">KANURRI VIJAY</h4>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+  <div id="navbot">
+    <nav class="navbar navbar-default navbar-bottom container-fluid" id="deskview"
+      style="height: 110px;border-radius: 0px;border-width: 0px; background-color:#023D4F; margin-bottom: -40px; margin-top: 110px;  color: white;">
+
+      <div class="row" style="margin-top: 10px;">
+        <div class="col-lg-6 text-center">
+          <p style="font-weight: bolder;font-size: 20px; padding-top:10px;">Follow Us:&nbsp;
+            <a href="https://www.facebook.com/ieee.nitp" target="_blank"><i class="fa fa-facebook fa-2x data"></i></a>
+            &nbsp;&nbsp;
+
+            <a href="mailto:ieeeclub@nitp.ac.in" target="_blank"><i class="fa fa-envelope fa-2x data"></i></a>
+            &nbsp;&nbsp;
+          </p>
+        </div>
+
+        <div class="col-lg-6 text-center" style="margin-top: 10px;">
+          <a href="index.html" style="text-decoration:none;color:white;">Home |</a>
+          <a href="events.html" style="text-decoration:none;color:white;">Events |</a>
+          <a href="gallery.html" style="text-decoration:none;color:white;">Gallery |</a>
+          <a href="committee.html" style="text-decoration:none;color:white;">Committee </a>
+
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col-lg-6 text-center">
+          <p style="font-size:85%; font-weight: lighter;">Copyright © IEEE NIT Patna &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="developer.html" style="color: white;">
+              D&D by IEEE WEB TEAM. </a>
+          </p>
+        </div>
+
+      </div>
+
+
+
+
+
+
+    </nav>
+  </div>
+
+
+
+
+
+
+  <!-- js for mobile-->
+
+  <script type="text/javascript">
+    /****************** for mobile ***********************/
+
+    $(document).ready(function () {
+      $("#prcomtextmob").click(function () {
+        $("#prcomtextmob").css("color", "#0084AD");
+        $("#lastcomtextmob").css("color", "black");
+        $("#slastcomtextmob").css("color", "black");
+        $("#tlastcomtextmob").css("color", "black");
+
+        $("#prescommob").css("display", "block");
+        $("#lastcommob").css("display", "none");
+        $("#slastcommob").css("display", "none");
+        $("#tlastcommob").css("display", "none");
+      });
+    });
+
+    $(document).ready(function () {
+      $("#lastcomtextmob").click(function () {
+        $("#prcomtextmob").css("color", "black");
+        $("#lastcomtextmob").css("color", "#0084AD");
+        $("#slastcomtextmob").css("color", "black");
+        $("#tlastcomtextmob").css("color", "black");
+
+        $("#prescommob").css("display", "none");
+        $("#lastcommob").css("display", "block");
+        $("#slastcommob").css("display", "none");
+        $("#tlastcommob").css("display", "none");
+      });
+    });
+
+
+
+    $(document).ready(function () {
+      $("#slastcomtextmob").click(function () {
+        $("#prcomtextmob").css("color", "black");
+        $("#lastcomtextmob").css("color", "black");
+        $("#slastcomtextmob").css("color", "#0084AD");
+        $("#tlastcomtextmob").css("color", "black");
+
+        $("#prescommob").css("display", "none");
+        $("#lastcommob").css("display", "none");
+        $("#slastcommob").css("display", "block");
+        $("#tlastcommob").css("display", "none");
+      });
+    });
+
+    $(document).ready(function () {
+      $("#tlastcomtextmob").click(function () {
+        $("#prcomtextmob").css("color", "black");
+        $("#lastcomtextmob").css("color", "black");
+        $("#slastcomtextmob").css("color", "black");
+        $("#tlastcomtextmob").css("color", "#0084AD");
+
+        $("#prescommob").css("display", "none");
+        $("#lastcommob").css("display", "none");
+        $("#slastcommob").css("display", "none");
+        $("#tlastcommob").css("display", "block");
+      });
+    });
+
+
+
+
+
+    /*********************** end for mobile **************************/
+  </script>
+
+
+</body>
+
+</html>
